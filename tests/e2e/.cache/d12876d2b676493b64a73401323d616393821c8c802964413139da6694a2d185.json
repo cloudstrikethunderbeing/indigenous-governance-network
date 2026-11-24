@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:41:04.280Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-founding-progress.e2e.ts::launch-nation-founding-progress",
+      "targetId": "web",
+      "instructionDigest": "81dccbffa7e5dc859e50e68e8dab7a63e54ccad85d475e53c1ed7837ddc119a2",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Dismissed the welcome popup and the Deploy a Nation page is open at /os/launcher, showing the \"Launch your Nation OS\" window with a \"Sign in to launch your Nation OS\" prompt and \"Sign in with Internet Identity\" button. Next step: press Deploy Your Own DAO.",
+    "startPath": "/os/launcher",
+    "endPath": "/os/launcher",
+    "goneAnchors": [
+      {
+        "role": "button",
+        "name": "Skip the introduction"
+      },
+      {
+        "role": "heading",
+        "name": "Welcome to Your Nation's Digital Future"
+      },
+      {
+        "text": "Govern Independently"
+      },
+      {
+        "text": "Make and record your community's own decisions, on your own terms."
+      },
+      {
+        "text": "Connect with Other Nations"
+      },
+      {
+        "text": "Choose to collaborate with other Nations — always voluntarily."
+      },
+      {
+        "text": "Build Your Community's Future"
+      },
+      {
+        "text": "Keep governance, documents and knowledge in one private home."
+      }
+    ],
+    "endWaitMs": 10841,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

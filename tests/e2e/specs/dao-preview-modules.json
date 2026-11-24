@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "dao-preview-modules",
+    "kind": "interactive",
+    "goal": "Open the visual demo from the landing page and step through the module explanations",
+    "requirementIndexes": [],
+    "acceptanceCriteriaIndexes": [],
+    "startPath": "/deploy",
+    "steps": [
+      "Open the Deploy page",
+      "Press Launch Your DAO — Visual Demo",
+      "Press Constitution — implemented today",
+      "Press Three Founding Authorities — implemented today",
+      "Press Membership — implemented today",
+      "Press Proposals & Voting — implemented today",
+      "Press Nation-to-Nation Collaboration — future phase",
+      "Press AI Governance Agents — future phase",
+      "Press Treasury — implemented today",
+      "Press Community Economy — future phase",
+      "Press Next",
+      "Press Next"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Launch Your DAO — Visual Demo"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Your Nation. Your Rules. Your Governance."
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Constitution"
+      },
+      {
+        "afterStep": 3,
+        "expectText": "Three Founding Authorities"
+      },
+      {
+        "afterStep": 4,
+        "expectText": "Membership"
+      },
+      {
+        "afterStep": 5,
+        "expectText": "Proposals & Voting"
+      },
+      {
+        "afterStep": 6,
+        "expectText": "Nation-to-Nation Collaboration"
+      },
+      {
+        "afterStep": 7,
+        "expectText": "AI Governance Agents"
+      },
+      {
+        "afterStep": 8,
+        "expectText": "Treasury"
+      },
+      {
+        "afterStep": 9,
+        "expectText": "Community Economy"
+      },
+      {
+        "afterStep": 10,
+        "expectText": "Your Constitution"
+      },
+      {
+        "afterStep": 11,
+        "expectText": "Your Founding Authorities"
+      }
+    ]
+  }
+}

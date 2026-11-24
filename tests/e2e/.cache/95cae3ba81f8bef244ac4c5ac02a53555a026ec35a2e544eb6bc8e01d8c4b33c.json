@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:47:46.244Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Close\" in \"Nation-to-Nation Collaboration\"",
+        "target": {
+          "role": "button",
+          "name": "Close",
+          "within": "Nation-to-Nation Collaboration"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"AI Governance Agents — future phase\" in \"The sovereign governance ecosystem\"",
+        "target": {
+          "role": "button",
+          "name": "AI Governance Agents — future phase",
+          "within": "The sovereign governance ecosystem"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-modules.e2e.ts::dao-preview-modules",
+      "targetId": "web",
+      "instructionDigest": "5306304fa194d9fdf3a6b13185be20783c92ece576c64136d4362dd63897eea8",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Closed the Nation-to-Nation Collaboration dialog and pressed \"AI Governance Agents — future phase\" on /dao-preview. A dialog opened titled \"AI Governance Agents\" showing \"Future phase\" and its description (\"Advisory intelligence, never decision authority.\").",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "AI Governance Agents"
+      },
+      {
+        "text": "Advisory intelligence, never decision authority."
+      },
+      {
+        "text": "A later phase: agents summarize proposals and surface context for members. Voting, treasury execution and enforcement stay with your people and your contracts."
+      },
+      {
+        "role": "dialog",
+        "name": "AI Governance Agents"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Nation-to-Nation Collaboration"
+      },
+      {
+        "text": "Voluntary partnerships between sovereign Nations."
+      },
+      {
+        "text": "A later phase: Nations opt in to shared initiatives and regional projects. Private membership, financial and document records are never shared by default."
+      },
+      {
+        "role": "dialog",
+        "name": "Nation-to-Nation Collaboration"
+      }
+    ],
+    "endWaitMs": 10790,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

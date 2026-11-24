@@ -1,0 +1,2524 @@
+type _ImmutableObjectStorageRefillResult = 
+ record {
+   success: opt bool;
+   topped_up_amount: opt nat;
+ };
+type _ImmutableObjectStorageRefillInformation = record {
+                                                  proposed_top_up_amount:
+                                                   opt nat;};
+type _ImmutableObjectStorageCreateCertificateResult = 
+ record {
+   blob_hash: text;
+   method: text;
+ };
+type WorkspaceId = nat;
+type WorkspaceAppStatus = 
+ variant {
+   preview;
+   working;
+ };
+type WorkspaceAppId = nat;
+type WorkspaceApp = 
+ record {
+   appKey: text;
+   displayName: text;
+   iconKey: text;
+   id: WorkspaceAppId;
+   oneLineDescription: text;
+   order: nat;
+   status: WorkspaceAppStatus;
+   workspace: WorkspaceId;
+ };
+type Workspace = 
+ record {
+   description: text;
+   id: WorkspaceId;
+   name: text;
+   nation: NationId;
+   timestamp: Timestamp;
+ };
+type WeeklyChallenge = 
+ record {
+   options: vec ChallengeOption;
+   question: text;
+   updatedAt: Timestamp;
+   weekKey: text;
+ };
+type WaitlistSubmitResult = 
+ variant {
+   err: WaitlistError;
+   ok: WaitlistEntryId;
+ };
+type WaitlistInterestArea = 
+ variant {
+   aiAndTechnology;
+   daoAndEcosystemDevelopment;
+   digitalSovereigntyAndDataGovernance;
+   fundingAndStrategicPartnerships;
+   indigenousLeadershipAndGovernance;
+   legalResearchAndPolicy;
+   researchParticipation;
+ };
+type WaitlistError = 
+ variant {
+   invalidEmail;
+   missingEmail;
+   missingName;
+ };
+type WaitlistEntryId = nat;
+type WaitlistEntry = 
+ record {
+   email: text;
+   id: WaitlistEntryId;
+   interestArea: opt WaitlistInterestArea;
+   name: text;
+   organization: opt text;
+   timestamp: Timestamp;
+ };
+type VotingEligibility = 
+ record {
+   eligible: bool;
+   eligibleFrom: opt Timestamp;
+   restriction: opt EligibilityRestriction;
+ };
+type VoteDelegation = 
+ record {
+   active: bool;
+   delegate: principal;
+   delegator: principal;
+   timestamp: Timestamp;
+ };
+type VoteChoice = 
+ variant {
+   abstain;
+   against;
+   inFavor;
+ };
+type VisitorSessionId = text;
+type VisitorError = 
+ variant {
+   alreadyReported;
+   bodyTooLong;
+   invalidChallenge;
+   missingBody;
+   missingSessionId;
+   notAuthorized;
+   unknownChallenge;
+   unknownComment;
+   unknownOption;
+ };
+type VisitorAnalytics = 
+ record {
+   answerDistribution: AnswerDistribution;
+   completionRatePercent: float64;
+   conversion: ParticipationConversion;
+   recentComments: vec PublicComment;
+   returningVisitors: ReturningVisitorActivity;
+   totals: EngagementTotals;
+   weeklyTrend: vec ParticipationTrendPoint;
+ };
+type Value = 
+ variant {
+   "bool": bool;
+   float: float64;
+   "int": int;
+   "nat": nat;
+   "null";
+   "text": text;
+ };
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type UpdateLeadResult = 
+ variant {
+   err: LeadError;
+   ok;
+ };
+type TreasuryTransactionId = nat;
+type TreasuryTransaction = 
+ record {
+   amount: nat;
+   category: TreasuryCategory;
+   description: text;
+   direction: TreasuryDirection;
+   id: TreasuryTransactionId;
+   recordedBy: principal;
+   timestamp: Timestamp;
+ };
+type TreasurySummary = 
+ record {
+   aiApiSpend: nat;
+   approvedResearchBounties: nat;
+   currentBalance: int;
+   fundingReceived: nat;
+   grantsAndDonations: nat;
+   infrastructureAndStorageCost: nat;
+   institutionalResearchContracts: nat;
+   monthlyOperatingCost: nat;
+   otherOperatingCost: nat;
+   runwayMonths: opt nat;
+   serviceRevenue: nat;
+   totalExpense: nat;
+   totalIncome: nat;
+ };
+type TreasuryDirection = 
+ variant {
+   expense;
+   income;
+ };
+type TreasuryCategory = 
+ variant {
+   aiApiSpend;
+   approvedResearchBounty;
+   fundingReceived;
+   grantOrDonation;
+   infrastructureOrStorageCost;
+   institutionalResearchContract;
+   otherOperatingCost;
+   serviceRevenue;
+ };
+type TokenomicsConfig = 
+ record {
+   allocations: vec TokenAllocation;
+   maxSupply: nat;
+ };
+type TokenAllocation = 
+ record {
+   category: AllocationCategory;
+   lockupPeriod: text;
+   percentage: float64;
+   releaseConditions: text;
+   tokenAmount: nat;
+   treasuryOversight: text;
+   vestingSchedule: text;
+ };
+type Timestamp = int;
+type SuccessionRecoveryPlan = 
+ record {
+   alternateAuthorities: vec AlternateAuthority;
+   designatedSuccessors: vec DesignatedSuccessor;
+   identityRecoveryProcedure: text;
+   membershipCouncil: vec CouncilMember;
+   nation: NationId;
+   ratifications: vec PlanRatification;
+   ratified: bool;
+   recoveryApprovalThreshold: nat;
+   recoveryTrustees: vec RecoveryTrustee;
+   timestamp: Timestamp;
+ };
+type SubmitLeadResult = 
+ variant {
+   err: LeadError;
+   ok: LeadId;
+ };
+type SubmitJoinRequestResult = 
+ variant {
+   err: GovernanceError;
+   ok: JoinRequestId;
+ };
+type SubmitDiscoveryResult = 
+ variant {
+   err: DiscoveryError;
+   ok: record {
+         classification: SubmissionClassification;
+         id: SubmissionId;
+       };
+ };
+type SubmitCommentResult = 
+ variant {
+   err: VisitorError;
+   ok: CommentId;
+ };
+type SubmitChallengeResponseResult = 
+ variant {
+   err: VisitorError;
+   ok: ChallengeResponseId;
+ };
+type SubmissionVisibility = 
+ variant {
+   communityOnly;
+   publicVisible;
+ };
+type SubmissionId = nat;
+type SubmissionClassification = 
+ variant {
+   feedback;
+   idea;
+   need;
+   opportunity;
+   potentialProposal;
+ };
+type StartChallengeResult = 
+ variant {
+   err: VisitorError;
+   ok: ChallengeStartId;
+ };
+type StakingView = 
+ record {
+   accruedMaturity: nat;
+   effectiveStatus: StakingStatus;
+   id: StakingId;
+   lockStart: Timestamp;
+   lockTermSeconds: nat;
+   lockedAmount: nat;
+   maturityRateBps: nat;
+   member: principal;
+   status: StakingStatus;
+   unlockTime: Timestamp;
+   votingPower: nat;
+ };
+type StakingStatus = 
+ variant {
+   active;
+   matured;
+   unlocked;
+ };
+type StakingRecord = 
+ record {
+   id: StakingId;
+   lockStart: Timestamp;
+   lockTermSeconds: nat;
+   lockedAmount: nat;
+   maturityRateBps: nat;
+   member: principal;
+   status: StakingStatus;
+   unlockTime: Timestamp;
+ };
+type StakingId = nat;
+type StakePreset = 
+ record {
+   maturityRateBps: nat;
+   termLabel: text;
+   termSeconds: nat;
+ };
+type SrcTransactionType = 
+ variant {
+   earn;
+   spend;
+ };
+type SrcTransactionId = nat;
+type SrcTransaction = 
+ record {
+   amount: nat;
+   id: SrcTransactionId;
+   member: principal;
+   reference: SrcReference;
+   timestamp: Timestamp;
+   txType: SrcTransactionType;
+ };
+type SrcReference = 
+ variant {
+   assignment: AssignmentId;
+   contribution: ContributionId;
+   none;
+ };
+type SrcBalance = nat;
+type SovereignError = 
+ variant {
+   bodyTooLong;
+   invalidPrivacyLevel;
+   invalidTheme;
+   invalidTimeRange;
+   missingApps;
+   missingBody;
+   missingGovernanceModel;
+   missingName;
+   missingTitle;
+   notAuthorized;
+   notNationMember;
+   notNationOwner;
+   unknownDocument;
+   unknownEvent;
+   unknownMember;
+   unknownNation;
+   unknownProposal;
+   unknownThread;
+   unknownWorkspace;
+ };
+type SetNetworkOptInResult = 
+ variant {
+   err: SovereignError;
+   ok;
+ };
+type SelectedApp = 
+ record {
+   appKey: text;
+   displayName: text;
+   iconKey: text;
+   oneLineDescription: text;
+   status: WorkspaceAppStatus;
+ };
+type SaveSuccessionPlanResult = 
+ variant {
+   err: LifecycleError;
+   ok;
+ };
+type SaveRoleResult = 
+ variant {
+   err: GovernanceError;
+   ok: GovernanceRoleId;
+ };
+type SaveRoleDelegationResult = 
+ variant {
+   err: GovernanceError;
+   ok: RoleDelegationId;
+ };
+type SaveRoleAssignmentResult = 
+ variant {
+   err: GovernanceError;
+   ok: RoleAssignmentId;
+ };
+type SavePrivacySettingsResult = 
+ variant {
+   err: SovereignError;
+   ok;
+ };
+type SaveNationThemeResult = 
+ variant {
+   err: SovereignError;
+   ok;
+ };
+type SaveNationProposalResult = 
+ variant {
+   err: SovereignError;
+   ok: NationProposalId;
+ };
+type SaveMembershipVotingResult = 
+ variant {
+   err: SovereignError;
+   ok;
+ };
+type SaveMemberDepartureResult = 
+ variant {
+   err: LifecycleError;
+   ok: MemberDepartureId;
+ };
+type SaveGovernanceProposalResult = 
+ variant {
+   err: GovernanceError;
+   ok: GovernanceProposalId;
+ };
+type SaveFolderResult = 
+ variant {
+   err: FileError;
+   ok: NationFolderId;
+ };
+type SaveFileResult = 
+ variant {
+   err: FileError;
+   ok: NationFileId;
+ };
+type SaveExecutionRequestResult = 
+ variant {
+   err: GovernanceError;
+   ok: ExecutionRequestId;
+ };
+type SaveEmergencySuspensionResult = 
+ variant {
+   err: LifecycleError;
+   ok: EmergencySuspensionId;
+ };
+type SaveDissolutionResult = 
+ variant {
+   err: LifecycleError;
+   ok: DissolutionId;
+ };
+type SaveDiscussionPostResult = 
+ variant {
+   err: SovereignError;
+   ok: DiscussionPostId;
+ };
+type SaveConstitutionResult = 
+ variant {
+   err: GovernanceError;
+   ok: ConstitutionId;
+ };
+type SaveCommunityProfileResult = 
+ variant {
+   err: DiscoveryError;
+   ok: CommunityId;
+ };
+type SaveCollaborationProfileResult = 
+ variant {
+   err: DiscoveryError;
+   ok: CollaborationProfileId;
+ };
+type SaveAuthorityPositionResult = 
+ variant {
+   err: LifecycleError;
+   ok: AuthorityPositionId;
+ };
+type SaveAttachmentResult = 
+ variant {
+   err: FileError;
+   ok: FileAttachmentId;
+ };
+type SaveAppealResult = 
+ variant {
+   err: GovernanceError;
+   ok: AppealId;
+ };
+type SaveAmendmentResult = 
+ variant {
+   err: GovernanceError;
+   ok: AmendmentId;
+ };
+type SaveAmendmentProposalResult = 
+ variant {
+   err: LifecycleError;
+   ok: AmendmentProposalId;
+ };
+type RuleChange = 
+ record {
+   afterValue: text;
+   beforeValue: text;
+   fieldName: text;
+ };
+type RolePermissionEntry = 
+ record {
+   allowed: bool;
+   capability: text;
+   roleLabel: text;
+ };
+type RoleDelegationId = nat;
+type RoleDelegation = 
+ record {
+   active: bool;
+   capabilities: vec GovernanceCapability;
+   delegate: principal;
+   delegator: principal;
+   expiresAt: Timestamp;
+   id: RoleDelegationId;
+   nation: NationId;
+   role: GovernanceRoleId;
+   timestamp: Timestamp;
+ };
+type RoleAssignmentId = nat;
+type RoleAssignment = 
+ record {
+   grantedBy: principal;
+   id: RoleAssignmentId;
+   member: principal;
+   nation: NationId;
+   role: GovernanceRoleId;
+   timestamp: Timestamp;
+ };
+type ReviewJoinRequestResult = 
+ variant {
+   err: GovernanceError;
+   ok: JoinRequestStatus;
+ };
+type ReturningVisitorActivity = 
+ record {
+   distinctSessions: nat;
+   newSessions: nat;
+   returningSessions: nat;
+ };
+type ResumeLaunchResult = 
+ variant {
+   err: GovernanceError;
+   ok: LaunchStatus;
+ };
+type Result__1 = 
+ record {
+   hasMore: bool;
+   rows: vec vec Cell;
+ };
+type Result_1 = 
+ variant {
+   err: Error;
+   ok;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type RestoreEmergencySuspensionResult = 
+ variant {
+   err: LifecycleError;
+   ok;
+ };
+type RespondIntroductionResult = 
+ variant {
+   err: DiscoveryError;
+   ok: IntroductionStatus;
+ };
+type RequestIntroductionResult = 
+ variant {
+   err: DiscoveryError;
+   ok: IntroductionRequestId;
+ };
+type ReportCommentResult = 
+ variant {
+   err: VisitorError;
+   ok: CommentReportId;
+ };
+type RenameFolderResult = 
+ variant {
+   err: FileError;
+   ok;
+ };
+type RecoveryTrustee = 
+ record {
+   trustee: principal;
+   trusteeDisplayLabel: text;
+ };
+type RecordedVoteId = nat;
+type RecordedVote = 
+ record {
+   choice: VoteChoice;
+   confidential: bool;
+   decision: DecisionKind;
+   id: RecordedVoteId;
+   nation: NationId;
+   timestamp: Timestamp;
+   voter: principal;
+ };
+type RecordImpressionResult = 
+ variant {
+   err: VisitorError;
+   ok: ChallengeImpressionId;
+ };
+type RecordCensusResult = 
+ variant {
+   err: GovernanceError;
+   ok: CensusEntryId;
+ };
+type RecordAuthorityTermEventResult = 
+ variant {
+   err: LifecycleError;
+   ok: AuthorityTermEventId;
+ };
+type RecommendationKind = 
+ variant {
+   collaborationPartner;
+   matchingMember;
+   relevantProposal;
+   sharedObjective;
+   similarIdea;
+   suggestedNextStep;
+ };
+type Recommendation = 
+ record {
+   explanation: text;
+   kind: RecommendationKind;
+   referenceId: nat;
+   title: text;
+ };
+type RatifySuccessionPlanResult = 
+ variant {
+   err: LifecycleError;
+   ok;
+ };
+type RatifyAmendmentResult = 
+ variant {
+   err: LifecycleError;
+   ok: ConstitutionVersionId;
+ };
+type PublicComment = 
+ record {
+   body: text;
+   displayName: opt text;
+   id: CommentId;
+   moderationStatus: CommentModerationStatus;
+   participant: opt principal;
+   reported: bool;
+   sessionId: VisitorSessionId;
+   timestamp: Timestamp;
+ };
+type ProposalView = 
+ record {
+   category: ProposalCategory;
+   closeTimestamp: opt Timestamp;
+   description: text;
+   id: ProposalId;
+   openTimestamp: Timestamp;
+   proposer: principal;
+   status: ProposalStatus;
+   tally: ProposalTally;
+   title: text;
+ };
+type ProposalTally = 
+ record {
+   abstain: nat;
+   against: nat;
+   inFavor: nat;
+ };
+type ProposalStatus = 
+ variant {
+   closed;
+   open;
+   passed;
+   rejected;
+ };
+type ProposalOutcome = 
+ variant {
+   approved;
+   noQuorum;
+   rejected;
+   tied;
+ };
+type ProposalId = nat;
+type ProposalCategory = 
+ variant {
+   governanceParameters;
+   grantsAndRewards;
+   platformDevelopment;
+   researchPriority;
+   technicalUpgrade;
+   treasuryExpenditure;
+ };
+type PrivacySettings = 
+ record {
+   calendarVisible: bool;
+   discussionsVisible: bool;
+   documentsVisible: bool;
+   nation: NationId;
+   proposalsVisible: bool;
+   timestamp: Timestamp;
+   treasuryVisible: bool;
+ };
+type PrivacyLevel = 
+ variant {
+   openToCollaboration;
+   privateToMembers;
+   publiclyVisible;
+ };
+type PlanRatification = 
+ record {
+   authority: principal;
+   ratifiedAt: Timestamp;
+ };
+type PipelineStage = 
+ variant {
+   approvedAction;
+   collaboration;
+   communityFeedback;
+   draftProposal;
+   governanceVote;
+   idea;
+   results;
+ };
+type PipelineItemId = nat;
+type PipelineItem = 
+ record {
+   community: CommunityId;
+   id: PipelineItemId;
+   proposalId: opt ProposalId;
+   stage: PipelineStage;
+   submissionId: SubmissionId;
+   timestamp: Timestamp;
+   title: text;
+ };
+type PipelineInteractionKind = 
+ variant {
+   comment;
+   improvement;
+   support;
+ };
+type PipelineInteraction = 
+ record {
+   author: principal;
+   body: text;
+   id: nat;
+   kind: PipelineInteractionKind;
+   pipelineItemId: PipelineItemId;
+   timestamp: Timestamp;
+ };
+type PersonalRecordExport = 
+ record {
+   admission: opt MemberAdmission;
+   censusEntries: vec CensusEntry;
+   departures: vec MemberDeparture;
+   exportedAt: Timestamp;
+   member: principal;
+   nation: NationId;
+   recordedVotes: vec RecordedVote;
+ };
+type ParticipationTrendPoint = 
+ record {
+   comments: nat;
+   completions: nat;
+   day: text;
+   impressions: nat;
+   starts: nat;
+ };
+type ParticipationConversion = 
+ record {
+   completionRatePercent: float64;
+   completions: nat;
+   impressions: nat;
+   startRatePercent: float64;
+   starts: nat;
+ };
+type OrganizationType = 
+ variant {
+   cooperative;
+   educationalInstitution;
+   enterprise;
+   governmentOrPublicSector;
+   indigenousNationOrCommunity;
+   nonProfitOrCharity;
+   other;
+   smallBusiness;
+ };
+type ObligationsReview = 
+ record {
+   note: text;
+   outstandingObligations: vec text;
+   reviewedAt: Timestamp;
+   reviewedBy: principal;
+ };
+type NetworkNationProfile = 
+ record {
+   collaborationInterests: vec text;
+   name: text;
+   nation: NationId;
+   networkOptIn: bool;
+   region: text;
+   shortDescription: text;
+   timestamp: Timestamp;
+ };
+type NetworkActivityEntry = 
+ record {
+   community: CommunityId;
+   id: ActivityEntryId;
+   kind: ActivityKind;
+   summary: text;
+   timestamp: Timestamp;
+ };
+type NationWorkspaceView = 
+ record {
+   apps: vec WorkspaceApp;
+   membershipVoting: MembershipVotingConfig;
+   nation: Nation;
+   networkOptIn: bool;
+   privacySettings: PrivacySettings;
+   theme: NationTheme;
+   workspace: opt Workspace;
+ };
+type NationTreasuryTransactionId = nat;
+type NationTreasuryTransaction = 
+ record {
+   amount: nat;
+   category: text;
+   description: text;
+   direction: NationTreasuryDirection;
+   id: NationTreasuryTransactionId;
+   nation: NationId;
+   timestamp: Timestamp;
+ };
+type NationTreasurySummary = 
+ record {
+   balance: nat;
+   nation: NationId;
+   totalExpense: nat;
+   totalIncome: nat;
+   transactionCount: nat;
+ };
+type NationTreasuryDirection = 
+ variant {
+   expense;
+   income;
+ };
+type NationTheme = 
+ record {
+   blurEnabled: bool;
+   themeKey: text;
+   wallpaperKey: text;
+ };
+type NationProposalStatus = 
+ variant {
+   draft;
+   open;
+   passed;
+   rejected;
+   withdrawn;
+ };
+type NationProposalId = nat;
+type NationProposal = 
+ record {
+   id: NationProposalId;
+   nation: NationId;
+   status: NationProposalStatus;
+   summary: text;
+   timestamp: Timestamp;
+   title: text;
+   votesAbstain: nat;
+   votesAgainst: nat;
+   votesInFavor: nat;
+ };
+type NationMemberId = nat;
+type NationMember = 
+ record {
+   displayName: text;
+   id: NationMemberId;
+   member: principal;
+   nation: NationId;
+   permissionLabels: vec text;
+   roleLabel: text;
+   timestamp: Timestamp;
+ };
+type NationLifecycleState = 
+ variant {
+   active;
+   archived;
+   draft;
+   pendingActivation;
+   pendingDissolution;
+   restrictedGovernance;
+   temporarilySuspended;
+ };
+type NationLauncherConfig = 
+ record {
+   governanceModelKey: text;
+   membershipVoting: MembershipVotingConfig;
+   name: text;
+   region: text;
+   selectedApps: vec SelectedApp;
+   shortDescription: text;
+   theme: NationTheme;
+ };
+type NationId = nat;
+type NationFolderId = nat;
+type NationFolder = 
+ record {
+   createdBy: principal;
+   id: NationFolderId;
+   name: text;
+   nation: NationId;
+   parent: opt NationFolderId;
+   timestamp: Timestamp;
+ };
+type NationFileSummary = 
+ record {
+   fileCount: nat;
+   folderCount: nat;
+   nation: NationId;
+   totalBytes: nat;
+ };
+type NationFileId = nat;
+type NationFile = 
+ record {
+   content: ExternalBlob;
+   contentType: text;
+   folder: opt NationFolderId;
+   id: NationFileId;
+   name: text;
+   nation: NationId;
+   size: nat;
+   timestamp: Timestamp;
+   uploadedBy: principal;
+ };
+type NationDocumentId = nat;
+type NationDocument = 
+ record {
+   author: principal;
+   body: text;
+   id: NationDocumentId;
+   nation: NationId;
+   timestamp: Timestamp;
+   title: text;
+ };
+type Nation = 
+ record {
+   governanceModel: text;
+   id: NationId;
+   isSample: bool;
+   name: text;
+   openToCollaboration: bool;
+   privacyLevel: PrivacyLevel;
+   region: text;
+   shortDescription: text;
+   timestamp: Timestamp;
+ };
+type MoveFileResult = 
+ variant {
+   err: FileError;
+   ok;
+ };
+type ModerateCommentResult = 
+ variant {
+   err: VisitorError;
+   ok;
+ };
+type MembershipVotingConfig = 
+ record {
+   approvalThresholdPercent: nat;
+   membershipModel: text;
+   quorumPercent: nat;
+   votingModel: text;
+ };
+type MembershipInvitationId = nat;
+type MembershipApprovalResult = 
+ variant {
+   err: GovernanceError;
+   ok: record {
+         admitted: bool;
+         approvalId: nat;
+       };
+ };
+type MemberDepartureId = nat;
+type MemberDeparture = 
+ record {
+   appealReference: opt AppealId;
+   effectiveAt: Timestamp;
+   id: MemberDepartureId;
+   kind: DepartureKind;
+   member: principal;
+   nation: NationId;
+   notice: text;
+   permissionRevokedAt: opt Timestamp;
+   recordedBy: principal;
+   reviewNote: text;
+   status: DepartureStatus;
+   timestamp: Timestamp;
+ };
+type MemberAdmissionId = nat;
+type MemberAdmission = 
+ record {
+   admittedAt: Timestamp;
+   constitutionVersion: nat;
+   id: MemberAdmissionId;
+   member: principal;
+   nation: NationId;
+   timestamp: Timestamp;
+ };
+type LifecycleError = 
+ variant {
+   alreadyArchived;
+   approvalThresholdNotMet;
+   coolingOffNotElapsed;
+   duplicateApproval;
+   duplicateIdentity;
+   emergencyScopeExceeded;
+   invalidLifecycleTransition;
+   invalidThreshold;
+   missingReason;
+   missingSummary;
+   missingTitle;
+   notActivatedDraft;
+   notAuthorized;
+   notFoundingAuthority;
+   notNationMember;
+   obligationsNotReviewed;
+   planNotRatified;
+   quorumNotReached;
+   selfApproval;
+   successorNotAccepted;
+   unknownAmendment;
+   unknownDeparture;
+   unknownDissolution;
+   unknownNation;
+   unknownPosition;
+   unknownSuspension;
+ };
+type LeadStatus = 
+ variant {
+   contacted;
+   converted;
+   foundingOrganizationProspect;
+   interested;
+   new;
+   notProceeding;
+   strategicPartner;
+ };
+type LeadPathway = 
+ variant {
+   foundingOrganization;
+   freeEarlyAccess;
+   strategicFundingPartner;
+ };
+type LeadList = 
+ record {
+   leads: vec Lead;
+   pathway: LeadPathway;
+   total: nat;
+ };
+type LeadId = nat;
+type LeadError = 
+ variant {
+   invalidEmail;
+   missingConsent;
+   missingEmail;
+   missingName;
+   missingOrganization;
+   notAuthorized;
+   unknownLead;
+ };
+type LeadAnalytics = 
+ record {
+   consentingLeads: nat;
+   foundingOrganizationCount: nat;
+   freeEarlyAccessCount: nat;
+   organizationTypeCounts: vec record {
+                                 OrganizationType;
+                                 nat;
+                               };
+   prepaidInterestCount: nat;
+   statusCounts: vec record {
+                       LeadStatus;
+                       nat;
+                     };
+   strategicFundingPartnerCount: nat;
+   totalLeads: nat;
+ };
+type Lead = 
+ record {
+   adminNote: opt text;
+   budgetRange: opt text;
+   consentToContact: bool;
+   email: text;
+   id: LeadId;
+   intendedDaoUseCase: opt text;
+   intendedDeployment: opt text;
+   intendedSupport: opt FundingSupportType;
+   name: text;
+   organization: opt text;
+   organizationType: opt OrganizationType;
+   pathway: LeadPathway;
+   prepaidInterest: opt bool;
+   status: LeadStatus;
+   timestamp: Timestamp;
+ };
+type LaunchStatus = 
+ record {
+   acceptedAuthorities: nat;
+   awaitingOtherSeats: vec FoundingSeatSummary;
+   blockedReason: text;
+   callerSeats: vec FoundingSeatSummary;
+   canResume: bool;
+   constitutionSaved: bool;
+   lifecycleState: NationLifecycleState;
+   nation: NationId;
+   requiredAuthorities: nat;
+   setupStatus: FoundingSetupStatus;
+ };
+type JoinRequestStatus = 
+ variant {
+   active;
+   approved;
+   expired;
+   pendingReview;
+   rejected;
+   underReview;
+   withdrawn;
+ };
+type JoinRequestId = nat;
+type JoinRequest = 
+ record {
+   applicant: principal;
+   approvers: vec principal;
+   constitutionVersion: nat;
+   displayName: text;
+   expiresAt: Timestamp;
+   id: JoinRequestId;
+   message: text;
+   nation: NationId;
+   requiredApprovals: nat;
+   status: JoinRequestStatus;
+   timestamp: Timestamp;
+ };
+type IssueInvitationResult = 
+ variant {
+   err: GovernanceError;
+   ok: MembershipInvitationId;
+ };
+type IntroductionStatus = 
+ variant {
+   approved;
+   declined;
+   pending;
+ };
+type IntroductionRequestId = nat;
+type IntroductionRequest = 
+ record {
+   id: IntroductionRequestId;
+   message: text;
+   requester: CollaborationParty;
+   requesterApproved: bool;
+   status: IntroductionStatus;
+   target: CollaborationParty;
+   targetApproved: bool;
+   timestamp: Timestamp;
+ };
+type GovernanceRuleSet = 
+ record {
+   abstentionsCount: bool;
+   aiPermissions: text;
+   amendmentProcedure: text;
+   appealsProcedure: text;
+   approvalOutcomes: vec text;
+   approvalThresholdPercent: nat;
+   collaborationDataSharing: text;
+   confidentialityRule: text;
+   dataExportProcedure: text;
+   delegationAllowed: bool;
+   disputeProcedure: text;
+   dissolutionProcedure: text;
+   documentAccess: text;
+   emergencyPauseProcedure: text;
+   evidenceReviewProcedure: text;
+   foundingAuthorityProcedure: text;
+   governanceRecoveryProcedure: text;
+   humanOversight: text;
+   identityVerification: text;
+   leadershipElectionProcedure: text;
+   leadershipRemovalProcedure: text;
+   leadershipTermDays: nat;
+   loginRequirement: text;
+   membershipApprovalThresholdPercent: nat;
+   membershipEligibility: text;
+   newMemberWaitingPeriodDays: nat;
+   participationRequirement: text;
+   proposalClassifications: vec text;
+   proposalDiscussionPeriodDays: nat;
+   proposalReviewPeriodDays: nat;
+   proposalSubmissionPeriodDays: nat;
+   quorumPercent: nat;
+   tieBreakRule: text;
+   treasuryAuthorization: text;
+   treasurySpendLimit: nat;
+   votingEligibility: text;
+   votingMethod: text;
+   votingWeight: text;
+ };
+type GovernanceRoleKind = 
+ variant {
+   auditor;
+   custom: GovernanceRoleId;
+   documentSteward;
+   executionAuthority;
+   foundingAuthority;
+   governanceDelegate;
+   member;
+   membershipAuthority;
+   observer;
+   proposalSteward;
+   treasurySteward;
+ };
+type GovernanceRoleId = nat;
+type GovernanceRole = 
+ record {
+   capabilities: vec GovernanceCapability;
+   description: text;
+   id: GovernanceRoleId;
+   isCustom: bool;
+   kind: GovernanceRoleKind;
+   nation: NationId;
+   roleName: text;
+   timestamp: Timestamp;
+ };
+type GovernanceProposalStatus = 
+ variant {
+   discussion;
+   draft;
+   passed;
+   rejected;
+   review;
+   voting;
+   withdrawn;
+ };
+type GovernanceProposalId = nat;
+type GovernanceProposal = 
+ record {
+   abstentionsCount: bool;
+   approvalThresholdPercent: nat;
+   classification: text;
+   constitutionVersion: nat;
+   discussionPeriodDays: nat;
+   id: GovernanceProposalId;
+   nation: NationId;
+   outcome: opt ProposalOutcome;
+   proposer: principal;
+   quorumPercent: nat;
+   reviewPeriodDays: nat;
+   status: GovernanceProposalStatus;
+   summary: text;
+   tieBreakRule: text;
+   timestamp: Timestamp;
+   title: text;
+   votesAbstain: nat;
+   votesAgainst: nat;
+   votesInFavor: nat;
+ };
+type GovernanceModelOption = 
+ record {
+   description: text;
+   labelText: text;
+   modelKey: text;
+ };
+type GovernanceHistoryKind = 
+ variant {
+   acceptance;
+   amendment;
+   appointment;
+   approval;
+   rejection;
+   vote;
+ };
+type GovernanceHistoryId = nat;
+type GovernanceHistoryEntry = 
+ record {
+   actorPrincipal: principal;
+   constitutionVersion: nat;
+   id: GovernanceHistoryId;
+   kind: GovernanceHistoryKind;
+   nation: NationId;
+   referenceId: nat;
+   summary: text;
+   timestamp: Timestamp;
+ };
+type GovernanceError = 
+ variant {
+   alreadyActivated;
+   alreadyVoted;
+   conflictOfInterest;
+   delegationExpired;
+   duplicateExecution;
+   executionPaused;
+   invalidRuleSet;
+   invalidThreshold;
+   invalidTimelock;
+   missingName;
+   missingSummary;
+   missingTitle;
+   notAuthorized;
+   notFoundingAuthority;
+   notInFoundingSetup;
+   notNationMember;
+   proposalNotPassed;
+   setupCancelledRecoverable;
+   setupExpired;
+   setupExpiredRecoverable;
+   unknownAppeal;
+   unknownConstitution;
+   unknownExecutionRequest;
+   unknownNation;
+   unknownProposal;
+   unknownRole;
+ };
+type GovernanceCapability = 
+ variant {
+   approve;
+   execute;
+   modify;
+   propose;
+   view;
+   vote;
+ };
+type FundingSupportType = 
+ variant {
+   grantOrPhilanthropy;
+   investmentInterest;
+   other;
+   sponsorship;
+   strategicPartnership;
+ };
+type FoundingSetupStatus = 
+ variant {
+   activated;
+   cancelled;
+   expired;
+   foundingSetup;
+ };
+type FoundingSetup = 
+ record {
+   activatedConstitutionVersion: opt nat;
+   foundingAuthority: principal;
+   nation: NationId;
+   setupExpiresAt: Timestamp;
+   status: FoundingSetupStatus;
+   timestamp: Timestamp;
+ };
+type FoundingSeatSummary = 
+ record {
+   appointmentId: nat;
+   appointmentLabel: text;
+   authority: principal;
+   awaitingOther: bool;
+   heldByCaller: bool;
+   status: FoundingAppointmentStatus;
+ };
+type FoundingAppointmentStatus = 
+ variant {
+   accepted;
+   declined;
+   expired;
+   pending;
+   replaced;
+ };
+type FoundingAppointment = 
+ record {
+   acceptedAt: opt Timestamp;
+   appointmentLabel: text;
+   authority: principal;
+   expiresAt: Timestamp;
+   id: nat;
+   invitationToken: text;
+   invitedEmail: opt text;
+   nation: NationId;
+   status: FoundingAppointmentStatus;
+   timestamp: Timestamp;
+ };
+type FileError = 
+ variant {
+   crossNationAccess;
+   duplicateName;
+   folderNotEmpty;
+   invalidMove;
+   missingName;
+   nameTooLong;
+   notAuthorized;
+   notNationMember;
+   sampleReadOnly;
+   unknownAttachment;
+   unknownFile;
+   unknownFolder;
+   unknownNation;
+   unknownTarget;
+ };
+type FileAttachmentTarget = 
+ variant {
+   calendarEvent: CalendarEventId;
+   discussionPost: DiscussionPostId;
+   document: NationDocumentId;
+   project: nat;
+   proposal: NationProposalId;
+ };
+type FileAttachmentId = nat;
+type FileAttachment = 
+ record {
+   attachedBy: principal;
+   file: NationFileId;
+   id: FileAttachmentId;
+   nation: NationId;
+   target: FileAttachmentTarget;
+   timestamp: Timestamp;
+ };
+type ExternalBlob = blob;
+type ExecutionStatus = 
+ variant {
+   cancelled;
+   executed;
+   paused;
+   pendingAuthorization;
+   rejected;
+   timelocked;
+ };
+type ExecutionRequestId = nat;
+type ExecutionRequest = 
+ record {
+   authorizedBy: opt principal;
+   cancelledBy: opt principal;
+   constitutionVersion: nat;
+   highRisk: bool;
+   id: ExecutionRequestId;
+   nation: NationId;
+   proposal: GovernanceProposalId;
+   requestedBy: principal;
+   status: ExecutionStatus;
+   timelockUntil: opt Timestamp;
+   timestamp: Timestamp;
+ };
+type ExecutionAuditEntry = 
+ record {
+   action: text;
+   actorPrincipal: principal;
+   id: nat;
+   nation: NationId;
+   note: text;
+   request: ExecutionRequestId;
+   timestamp: Timestamp;
+ };
+type Error = 
+ variant {
+   AmbiguousAttribute: record {
+                         field: text;
+                         sources: vec text;
+                       };
+   FrontendOriginMismatch: record {
+                             expected: vec text;
+                             got: text;
+                           };
+   FrontendOriginsNotConfigured;
+   MalformedCandid;
+   MissingField: text;
+   MixedSsoSources: record {
+                      otherKeys: vec text;
+                      ssoKeys: vec text;
+                    };
+   NoAttributes;
+   Stale: record {ageNs: nat;};
+   UnknownNonce;
+   UntrustedSsoSource: record {domain: text;};
+ };
+type EngagementTotals = 
+ record {
+   challengeCompletions: nat;
+   challengeStarts: nat;
+   comments: nat;
+   impressions: nat;
+   reports: nat;
+ };
+type EmissionScheduleEntry = 
+ record {
+   cumulativeReleased: nat;
+   emission: nat;
+   periodIndex: nat;
+   remainingSupply: nat;
+   startDate: Timestamp;
+ };
+type EmissionScheduleConfig = 
+ record {
+   halvingIntervalMonths: nat;
+   initialEmission: nat;
+   maxSupply: nat;
+   schedule: vec EmissionScheduleEntry;
+ };
+type EmergencySuspensionStatus = 
+ variant {
+   active;
+   expired;
+   restored;
+ };
+type EmergencySuspensionId = nat;
+type EmergencySuspension = 
+ record {
+   affectedAccounts: vec principal;
+   affectedFunctions: vec text;
+   approvingAuthorities: vec principal;
+   auditTrail: vec EmergencyAuditEntry;
+   expiresAt: Timestamp;
+   id: EmergencySuspensionId;
+   nation: NationId;
+   reason: text;
+   requestedBy: principal;
+   restoration: opt EmergencyRestoration;
+   status: EmergencySuspensionStatus;
+   timestamp: Timestamp;
+ };
+type EmergencyRestoration = 
+ record {
+   note: text;
+   restoredAt: Timestamp;
+   restoredBy: principal;
+ };
+type EmergencyAuditEntry = 
+ record {
+   action: text;
+   actorPrincipal: principal;
+   note: text;
+   timestamp: Timestamp;
+ };
+type EligibilityRestriction = 
+ variant {
+   inactivity;
+   notAdmitted;
+   waitingPeriod;
+ };
+type DissolutionTally = 
+ record {
+   approvalThresholdPercent: nat;
+   quorumPercent: nat;
+   votesAbstain: nat;
+   votesAgainst: nat;
+   votesInFavor: nat;
+ };
+type DissolutionStatus = 
+ variant {
+   approved;
+   archived;
+   coolingOff;
+   proposed;
+   rejected;
+   voting;
+   withdrawn;
+ };
+type DissolutionId = nat;
+type Dissolution = 
+ record {
+   archivedAt: opt Timestamp;
+   coolingOffEnd: Timestamp;
+   dataExportReference: opt text;
+   explanation: text;
+   finalConfirmation: opt PlanRatification;
+   id: DissolutionId;
+   memberNotifiedAt: opt Timestamp;
+   nation: NationId;
+   obligationsReview: opt ObligationsReview;
+   proposal: text;
+   proposer: principal;
+   status: DissolutionStatus;
+   tally: DissolutionTally;
+   timestamp: Timestamp;
+ };
+type DiscussionThreadId = nat;
+type DiscussionThread = 
+ record {
+   author: principal;
+   id: DiscussionThreadId;
+   nation: NationId;
+   timestamp: Timestamp;
+   title: text;
+ };
+type DiscussionPostId = nat;
+type DiscussionPost = 
+ record {
+   author: principal;
+   body: text;
+   id: DiscussionPostId;
+   thread: DiscussionThreadId;
+   timestamp: Timestamp;
+ };
+type DiscoverySubmission = 
+ record {
+   author: principal;
+   body: text;
+   category: text;
+   classification: SubmissionClassification;
+   community: CommunityId;
+   id: SubmissionId;
+   interestTags: vec text;
+   timestamp: Timestamp;
+   visibility: SubmissionVisibility;
+ };
+type DiscoveryError = 
+ variant {
+   alreadyApproved;
+   bodyTooLong;
+   invalidIntroductionState;
+   invalidStageTransition;
+   missingBody;
+   missingTitle;
+   notAuthorized;
+   notCommunityMember;
+   unknownCommunity;
+   unknownIntroduction;
+   unknownPipelineItem;
+   unknownProfile;
+   unknownSubmission;
+ };
+type DirectoryEntryKind = 
+ variant {
+   community;
+   opportunity;
+ };
+type DirectoryEntry = 
+ record {
+   description: text;
+   kind: DirectoryEntryKind;
+   referenceId: nat;
+   tags: vec text;
+   title: text;
+ };
+type DesignatedSuccessor = 
+ record {
+   position: AuthorityPositionId;
+   successor: principal;
+   successorDisplayLabel: text;
+ };
+type DepartureStatus = 
+ variant {
+   appealed;
+   effective;
+   notice;
+   underReview;
+   withdrawn;
+ };
+type DepartureKind = 
+ variant {
+   constitutionalRemoval;
+   retirement;
+   suspension;
+   voluntaryDeparture;
+ };
+type DeleteFolderResult = 
+ variant {
+   err: FileError;
+   ok;
+ };
+type DeleteFileResult = 
+ variant {
+   err: FileError;
+   ok;
+ };
+type DecisionKind = 
+ variant {
+   governanceProposal: GovernanceProposalId;
+   nationProposal: NationProposalId;
+ };
+type CreateProposalFromItemResult = 
+ variant {
+   err: DiscoveryError;
+   ok: ProposalId;
+ };
+type CreatePipelineItemResult = 
+ variant {
+   err: DiscoveryError;
+   ok: PipelineItemId;
+ };
+type CreateNationResult = 
+ variant {
+   err: SovereignError;
+   ok: NationId;
+ };
+type CouncilMember = 
+ record {
+   councilMember: principal;
+   councilMemberDisplayLabel: text;
+ };
+type CopilotSource = 
+ record {
+   referenceId: nat;
+   sourceKind: text;
+   title: text;
+ };
+type CopilotAnswer = 
+ record {
+   advisoryOnly: bool;
+   answer: text;
+   nation: NationId;
+   question: text;
+   sources: vec CopilotSource;
+   timestamp: Timestamp;
+ };
+type ContributionType = 
+ variant {
+   acceptedChallengeOrCorrection;
+   courtTreatyResearch;
+   expertPeerReview;
+   legalLegislativeResearch;
+   sourceVerificationCitationCorrection;
+   undripAnalysis;
+ };
+type ContributionStatus = 
+ variant {
+   approved;
+   pending;
+   rejected;
+ };
+type ContributionId = nat;
+type Contribution = 
+ record {
+   contributionType: ContributionType;
+   contributor: principal;
+   id: ContributionId;
+   links: vec text;
+   notes: text;
+   rationale: opt text;
+   reviewer: opt principal;
+   srcAwarded: opt nat;
+   status: ContributionStatus;
+   timestamp: Timestamp;
+ };
+type ConstitutionVersionId = nat;
+type ConstitutionVersion = 
+ record {
+   authorizingAuthority: principal;
+   effectiveDate: Timestamp;
+   id: ConstitutionVersionId;
+   nation: NationId;
+   producedByAmendment: opt AmendmentProposalId;
+   ratifications: vec PlanRatification;
+   rules: GovernanceRuleSet;
+   timestamp: Timestamp;
+   version: nat;
+ };
+type ConstitutionId = nat;
+type Constitution = 
+ record {
+   active: bool;
+   confirmedBy: principal;
+   id: ConstitutionId;
+   nation: NationId;
+   ratifications: opt vec PlanRatification;
+   rules: GovernanceRuleSet;
+   templateKey: text;
+   timestamp: Timestamp;
+   version: nat;
+ };
+type ConfirmFoundingSeatResult = 
+ variant {
+   err: GovernanceError;
+   ok: nat;
+ };
+type ConfigureWeeklyChallengeResult = 
+ variant {
+   err: VisitorError;
+   ok;
+ };
+type CommunityVisibility = 
+ variant {
+   privateVisible;
+   publicVisible;
+ };
+type CommunityProfile = 
+ record {
+   description: text;
+   discoveryOptIn: bool;
+   id: CommunityId;
+   interests: vec text;
+   name: text;
+   objectives: vec text;
+   owner: principal;
+   partnershipOpportunities: vec text;
+   projectNeeds: vec text;
+   region: text;
+   skills: vec text;
+   timestamp: Timestamp;
+   visibility: CommunityVisibility;
+ };
+type CommunityId = nat;
+type CommentReportId = nat;
+type CommentModerationStatus = 
+ variant {
+   hidden;
+   removed;
+   visible;
+ };
+type CommentId = nat;
+type CollectiveIntelligenceMetrics = 
+ record {
+   activeCommunities: nat;
+   activeProposals: nat;
+   collaborationOpportunities: nat;
+   completedInitiatives: nat;
+   ideasSubmitted: nat;
+   successfulPartnerships: nat;
+ };
+type CollaborationState = 
+ record {
+   displayLabel: text;
+   isSample: bool;
+   nation: NationId;
+   optedIn: bool;
+ };
+type CollaborationProfileId = nat;
+type CollaborationProfile = 
+ record {
+   discoveryOptIn: bool;
+   displayName: text;
+   id: CollaborationProfileId;
+   interests: vec text;
+   needs: vec text;
+   partnershipOpportunities: vec text;
+   party: CollaborationParty;
+   skills: vec text;
+   timestamp: Timestamp;
+ };
+type CollaborationParty = 
+ variant {
+   community: CommunityId;
+   member: principal;
+ };
+type ChallengeStartId = nat;
+type ChallengeResponseId = nat;
+type ChallengeOption = 
+ record {
+   labelText: text;
+   optionId: nat;
+ };
+type ChallengeImpressionId = nat;
+type CensusSummary = 
+ record {
+   activeMembers: nat;
+   delegations: nat;
+   disputes: nat;
+   eligibleMembers: nat;
+   executions: nat;
+   nation: NationId;
+   proposals: nat;
+   votes: nat;
+ };
+type CensusEventKind = 
+ variant {
+   activity;
+   delegation;
+   dispute;
+   executionOutcome;
+   membershipApproval;
+   permissionChange;
+   proposal;
+   vote;
+ };
+type CensusEntryId = nat;
+type CensusEntry = 
+ record {
+   confidential: bool;
+   constitutionVersion: nat;
+   id: CensusEntryId;
+   kind: CensusEventKind;
+   nation: NationId;
+   referenceId: nat;
+   subject: principal;
+   summary: text;
+   timestamp: Timestamp;
+ };
+type Cell = 
+ record {
+   name: text;
+   value: Value;
+ };
+type CalendarEventId = nat;
+type CalendarEvent = 
+ record {
+   description: text;
+   endTime: Timestamp;
+   id: CalendarEventId;
+   location: text;
+   nation: NationId;
+   startTime: Timestamp;
+   timestamp: Timestamp;
+   title: text;
+ };
+type AuthorityTermEventKind = 
+ variant {
+   acceptance;
+   appointment;
+   removal;
+   replacement;
+   resignation;
+   retirement;
+ };
+type AuthorityTermEventId = nat;
+type AuthorityTermEvent = 
+ record {
+   actingPrincipal: principal;
+   approvals: vec principal;
+   constitutionVersion: nat;
+   id: AuthorityTermEventId;
+   kind: AuthorityTermEventKind;
+   nation: NationId;
+   position: AuthorityPositionId;
+   reason: text;
+   subject: principal;
+   timestamp: Timestamp;
+ };
+type AuthorityPositionStatus = 
+ variant {
+   filled;
+   retired;
+   suspended;
+   vacant;
+ };
+type AuthorityPositionId = nat;
+type AuthorityPosition = 
+ record {
+   holder: opt principal;
+   holderDisplayLabel: text;
+   id: AuthorityPositionId;
+   nation: NationId;
+   seatLabel: text;
+   status: AuthorityPositionStatus;
+   termEnd: Timestamp;
+   termStart: Timestamp;
+   timestamp: Timestamp;
+ };
+type AssignmentStatus = 
+ variant {
+   completed;
+   inProgress;
+   queued;
+   queuedAwaitingFunding;
+ };
+type AssignmentPriority = 
+ variant {
+   high;
+   low;
+   medium;
+   urgent;
+ };
+type AssignmentId = nat;
+type Assignment = 
+ record {
+   description: text;
+   id: AssignmentId;
+   priority: AssignmentPriority;
+   requestedBy: principal;
+   srcSpent: nat;
+   status: AssignmentStatus;
+   timestamp: Timestamp;
+   title: text;
+ };
+type AskCopilotResult = 
+ variant {
+   err: SovereignError;
+   ok: CopilotAnswer;
+ };
+type ArchiveDissolutionResult = 
+ variant {
+   err: LifecycleError;
+   ok;
+ };
+type AppealStatus = 
+ variant {
+   denied;
+   submitted;
+   underReview;
+   upheld;
+   withdrawn;
+ };
+type AppealRecusal = 
+ record {
+   reason: text;
+   reviewer: principal;
+   timestamp: Timestamp;
+ };
+type AppealKind = 
+ variant {
+   governanceDecision;
+   inactivity;
+   membershipRejection;
+ };
+type AppealId = nat;
+type AppealEvidence = 
+ record {
+   detail: text;
+   evidenceLabel: text;
+   submittedBy: principal;
+   timestamp: Timestamp;
+ };
+type Appeal = 
+ record {
+   appellant: principal;
+   decidedBy: opt principal;
+   decisionNote: opt text;
+   evidence: vec AppealEvidence;
+   id: AppealId;
+   kind: AppealKind;
+   nation: NationId;
+   recusals: vec AppealRecusal;
+   status: AppealStatus;
+   subjectId: nat;
+   summary: text;
+   timestamp: Timestamp;
+ };
+type AnswerDistributionEntry = 
+ record {
+   count: nat;
+   labelText: text;
+   optionId: nat;
+ };
+type AnswerDistribution = 
+ record {
+   entries: vec AnswerDistributionEntry;
+   totalResponses: nat;
+   weekKey: text;
+ };
+type AmendmentProposalStatus = 
+ variant {
+   discussion;
+   ratified;
+   rejected;
+   voting;
+   withdrawn;
+ };
+type AmendmentProposalId = nat;
+type AmendmentProposal = 
+ record {
+   abstentionHandling: AbstentionHandling;
+   approvalThresholdPercent: nat;
+   baseConstitutionVersion: nat;
+   changes: vec RuleChange;
+   discussionThread: opt DiscussionThreadId;
+   effectiveDate: opt Timestamp;
+   id: AmendmentProposalId;
+   nation: NationId;
+   proposer: principal;
+   quorumPercent: nat;
+   ratifications: vec PlanRatification;
+   status: AmendmentProposalStatus;
+   summary: text;
+   timestamp: Timestamp;
+   title: text;
+   votingDeadline: Timestamp;
+   votingEligibility: text;
+ };
+type AmendmentId = nat;
+type Amendment = 
+ record {
+   authorizedBy: principal;
+   id: AmendmentId;
+   nation: NationId;
+   newRules: GovernanceRuleSet;
+   previousRules: GovernanceRuleSet;
+   previousVersion: nat;
+   resultingVersion: nat;
+   summary: text;
+   timestamp: Timestamp;
+ };
+type AlternateAuthority = 
+ record {
+   alternate: principal;
+   alternateDisplayLabel: text;
+   coversPosition: AuthorityPositionId;
+ };
+type AllocationCategory = 
+ variant {
+   adminDeveloperAllocation;
+   communityAirdrop;
+   daoTreasuryEcosystemReserve;
+   governanceParticipationRewards;
+   researchParticipationRewards;
+   stakingNeuronParticipation;
+ };
+type AdvancePipelineResult = 
+ variant {
+   err: DiscoveryError;
+   ok: PipelineStage;
+ };
+type AddInteractionResult = 
+ variant {
+   err: DiscoveryError;
+   ok: nat;
+ };
+type ActivityKind = 
+ variant {
+   communityMilestone;
+   partnership;
+   proposal;
+   publicIdea;
+ };
+type ActivityEntryId = nat;
+type ActivateFoundingResult = 
+ variant {
+   err: GovernanceError;
+   ok;
+ };
+type AcceptInvitationResult = 
+ variant {
+   err: GovernanceError;
+   ok: MemberAdmissionId;
+ };
+type AbstentionHandling = 
+ variant {
+   countTowardQuorum;
+   excludedFromDenominator;
+ };
+service : {
+  _immutableObjectStorageBlobsAreLive: (hashes: vec blob) -> (vec bool) query;
+  _immutableObjectStorageBlobsToDelete: () -> (vec blob) query;
+  _immutableObjectStorageConfirmBlobDeletion: (blobs: vec blob) -> ();
+  _immutableObjectStorageCreateCertificate: (blobHash: text) ->
+   (_ImmutableObjectStorageCreateCertificateResult);
+  _immutableObjectStorageRefillCashier: (refillInformation:
+   opt _ImmutableObjectStorageRefillInformation) ->
+   (_ImmutableObjectStorageRefillResult);
+  _immutableObjectStorageUpdateGatewayPrincipals: () -> ();
+  _initialize_access_control: () -> ();
+  _internet_identity_sign_in_finish: () -> (Result_1);
+  _internet_identity_sign_in_start: () -> (blob);
+  acceptAuthorityAppointment: (nation: NationId, position:
+   AuthorityPositionId) -> (RecordAuthorityTermEventResult);
+  acceptFoundingAppointment: (nation: NationId, appointment: nat) ->
+   (ActivateFoundingResult);
+  acceptFoundingInvitation: (nation: NationId, token: text) ->
+   (ActivateFoundingResult);
+  acceptMembershipInvitation: (nation: NationId, token: text) ->
+   (AcceptInvitationResult);
+  activateFounding: (nation: NationId) -> (ActivateFoundingResult);
+  addAppealEvidence: (appeal: AppealId, evidenceLabel: text, detail: 
+   text) -> (SaveAppealResult);
+  addPipelineInteraction: (itemId: PipelineItemId, kind:
+   PipelineInteractionKind, body: text) -> (AddInteractionResult);
+  advanceAssignmentStatus: (assignmentId: AssignmentId, newStatus:
+   AssignmentStatus) -> ();
+  advancePipelineItem: (itemId: PipelineItemId, to: PipelineStage) ->
+   (AdvancePipelineResult);
+  amendConstitution: (nation: NationId, summary: text, newRules:
+   GovernanceRuleSet) -> (SaveAmendmentResult);
+  appealMemberDeparture: (nation: NationId, departure: MemberDepartureId,
+   summary: text) -> (SaveMemberDepartureResult);
+  appointAuthoritySuccessor: (nation: NationId, position:
+   AuthorityPositionId, successor: principal, successorDisplayLabel: 
+   text, reason: text) -> (RecordAuthorityTermEventResult);
+  appointFoundingAuthority: (nation: NationId, authority: principal,
+   appointmentLabel: text) -> (SaveConstitutionResult);
+  approveEmergencySuspension: (nation: NationId, suspension:
+   EmergencySuspensionId) -> (SaveEmergencySuspensionResult);
+  approveMembership: (nation: NationId, member: principal) ->
+   (MembershipApprovalResult);
+  archiveDissolution: (nation: NationId, dissolution: DissolutionId) ->
+   (ArchiveDissolutionResult);
+  askCopilot: (nation: NationId, question: text) -> (AskCopilotResult);
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  assignRole: (nation: NationId, member: principal, role:
+   GovernanceRoleId) -> (SaveRoleAssignmentResult);
+  attachFileToTarget: (nation: NationId, file: NationFileId, target:
+   FileAttachmentTarget) -> (SaveAttachmentResult);
+  authorizeExecution: (request: ExecutionRequestId) ->
+   (SaveExecutionRequestResult);
+  beginFoundingSetup: (nation: NationId) -> (ActivateFoundingResult);
+  callerHasCapability: (nation: NationId, capability:
+   GovernanceCapability) -> (bool) query;
+  cancelDraftNation: (nation: NationId) -> (ArchiveDissolutionResult);
+  cancelExecution: (request: ExecutionRequestId) ->
+   (SaveExecutionRequestResult);
+  cancelFoundingSetup: (nation: NationId) -> (ActivateFoundingResult);
+  castDissolutionVote: (nation: NationId, dissolution: DissolutionId, choice:
+   VoteChoice) -> (SaveDissolutionResult);
+  castGovernanceVote: (proposal: GovernanceProposalId, choice: VoteChoice,
+   confidential: bool) -> (SaveGovernanceProposalResult);
+  castNationVote: (proposal: NationProposalId, choice: VoteChoice) ->
+   (SaveNationProposalResult);
+  castVote: (proposalId: ProposalId, choice: VoteChoice) -> ();
+  closeDissolutionVoting: (nation: NationId, dissolution: DissolutionId) ->
+   (SaveDissolutionResult);
+  closeGovernanceProposal: (proposal: GovernanceProposalId) ->
+   (SaveGovernanceProposalResult);
+  closeProposal: (proposalId: ProposalId) -> (ProposalStatus);
+  configureWeeklyChallenge: (weekKey: text, question: text, options:
+   vec ChallengeOption) -> (ConfigureWeeklyChallengeResult);
+  confirmFoundingSeat: (nation: NationId, appointment: nat) ->
+   (ConfirmFoundingSeatResult);
+  createAuthorityPosition: (nation: NationId, seatLabel: text, termStart:
+   Timestamp, termEnd: Timestamp) -> (SaveAuthorityPositionResult);
+  createCustomRole: (nation: NationId, roleName: text, description: text,
+   capabilities: vec GovernanceCapability) -> (SaveRoleResult);
+  createGovernanceProposal: (nation: NationId, title: text, summary: 
+   text, classification: text, reviewPeriodDays: nat, discussionPeriodDays:
+   nat, quorumPercent: nat, approvalThresholdPercent: nat, abstentionsCount:
+   bool, tieBreakRule: text) -> (SaveGovernanceProposalResult);
+  createNationFile: (nation: NationId, folder: opt NationFolderId, name:
+   text, size: nat, contentType: text, content: ExternalBlob) ->
+   (SaveFileResult);
+  createNationFolder: (nation: NationId, parent: opt NationFolderId, name:
+   text) -> (SaveFolderResult);
+  createNationFromLauncher: (config: NationLauncherConfig) ->
+   (CreateNationResult);
+  createPipelineItem: (submissionId: SubmissionId, title: text) ->
+   (CreatePipelineItemResult);
+  createProposal: (title: text, description: text, category:
+   ProposalCategory) -> (ProposalId);
+  createProposalFromPipelineItem: (itemId: PipelineItemId) ->
+   (CreateProposalFromItemResult);
+  createRoleDelegation: (nation: NationId, delegate: principal, role:
+   GovernanceRoleId, capabilities: vec GovernanceCapability, expiresAt:
+   Timestamp) -> (SaveRoleDelegationResult);
+  decideAppeal: (appeal: AppealId, uphold: bool, decisionNote: text) ->
+   (SaveAppealResult);
+  declineFoundingAppointment: (nation: NationId, appointment: nat) ->
+   (ActivateFoundingResult);
+  delegateVote: (delegate: principal) -> ();
+  deleteNationFile: (nation: NationId, file: NationFileId) ->
+   (DeleteFileResult);
+  deleteNationFolder: (nation: NationId, folder: NationFolderId) ->
+   (DeleteFolderResult);
+  detachFile: (nation: NationId, attachment: FileAttachmentId) ->
+   (DeleteFileResult);
+  ensureNationRoles: (nation: NationId) -> (vec GovernanceRole);
+  ensureSampleWorkspace: () -> (NationId);
+  execute: (qJson: text) -> (Result__1) query;
+  executeRequest: (request: ExecutionRequestId) ->
+   (SaveExecutionRequestResult);
+  exportMyRecords: (nation: NationId) -> (PersonalRecordExport) query;
+  fileAppeal: (nation: NationId, kind: AppealKind, subjectId: nat, summary:
+   text) -> (SaveAppealResult);
+  finalizeMemberDeparture: (nation: NationId, departure:
+   MemberDepartureId) -> (SaveMemberDepartureResult);
+  getActivationRequirements: (nation: NationId) ->
+   (record {
+      accepted: nat;
+      constitutionRatifiedByAll: bool;
+      hasConfirmedConstitution: bool;
+      outstanding: vec text;
+      planRatified: bool;
+      required: nat;
+    }) query;
+  getActiveConstitution: (nation: NationId) -> (opt Constitution) query;
+  getActiveRuleSet: (nation: NationId) -> (opt GovernanceRuleSet) query;
+  getApiDoc: () -> (text) query;
+  getAppeal: (appeal: AppealId) -> (opt Appeal) query;
+  getCallerCapabilities: (nation: NationId) ->
+   (vec GovernanceCapability) query;
+  getCallerContributions: () -> (vec Contribution) query;
+  getCallerSrcBalance: () -> (SrcBalance) query;
+  getCallerSrcTransactions: () -> (vec SrcTransaction) query;
+  getCallerUserRole: () -> (UserRole) query;
+  getCensusSummary: (nation: NationId) -> (CensusSummary) query;
+  getCollaborationState: (nation: NationId) -> (opt CollaborationState) query;
+  getCollectiveIntelligenceMetrics: () ->
+   (CollectiveIntelligenceMetrics) query;
+  getCommunityProfile: (community: CommunityId) ->
+   (opt CommunityProfile) query;
+  getDefaultRuleSet: (templateKey: text) -> (GovernanceRuleSet) query;
+  getDissolution: (nation: NationId) -> (opt Dissolution) query;
+  getEmergencySuspension: (suspension: EmergencySuspensionId) ->
+   (opt EmergencySuspension) query;
+  getEmissionScheduleConfig: () -> (EmissionScheduleConfig) query;
+  getExecutionRequest: (request: ExecutionRequestId) ->
+   (opt ExecutionRequest) query;
+  getFoundingSetup: (nation: NationId) -> (opt FoundingSetup) query;
+  getFoundingStatus: (nation: NationId) ->
+   (record {
+      accepted: nat;
+      activated: bool;
+      required: nat;
+    }) query;
+  getGovernanceProposal: (proposal: GovernanceProposalId) ->
+   (opt GovernanceProposal) query;
+  getLaunchStatus: (nation: NationId) -> (opt LaunchStatus) query;
+  getLeadAnalytics: () -> (LeadAnalytics) query;
+  getMemberDeparture: (departure: MemberDepartureId) ->
+   (opt MemberDeparture) query;
+  getMembershipApprovalStatus: (nation: NationId, member: principal) ->
+   (record {
+      approvals: nat;
+      required: nat;
+    }) query;
+  getMembershipVotingConfig: (nation: NationId) ->
+   (MembershipVotingConfig) query;
+  getMyDelegation: () -> (opt VoteDelegation) query;
+  getNation: (nation: NationId) -> (opt Nation) query;
+  getNationDocument: (document: NationDocumentId) ->
+   (opt NationDocument) query;
+  getNationFileSummary: (nation: NationId) -> (NationFileSummary) query;
+  getNationLifecycle: (nation: NationId) ->
+   (opt
+     record {
+       enteredAt: Timestamp;
+       explanation: text;
+       reason: text;
+       state: NationLifecycleState;
+       stateKey: text;
+     }) query;
+  getNationProposal: (proposal: NationProposalId) ->
+   (opt NationProposal) query;
+  getNationRole: (nation: NationId, role: GovernanceRoleId) ->
+   (opt GovernanceRole) query;
+  getNationTheme: (nation: NationId) -> (NationTheme) query;
+  getNationTreasurySummary: (nation: NationId) ->
+   (NationTreasurySummary) query;
+  getNationWorkspaceView: (nation: NationId) ->
+   (opt NationWorkspaceView) query;
+  getNetworkActivityFeed: () -> (vec NetworkActivityEntry) query;
+  getPrivacySettings: (nation: NationId) -> (PrivacySettings) query;
+  getProposal: (id: ProposalId) -> (opt ProposalView) query;
+  getRolePermissions: (nation: NationId) -> (vec RolePermissionEntry) query;
+  getSuccessionPlan: (nation: NationId) -> (opt SuccessionRecoveryPlan) query;
+  getTokenomicsConfig: () -> (TokenomicsConfig) query;
+  getTreasurySummary: () -> (TreasurySummary) query;
+  getVisitorAnalytics: () -> (VisitorAnalytics) query;
+  getVotingEligibility: (nation: NationId) -> (VotingEligibility) query;
+  getWaitlistCount: () -> (nat) query;
+  getWeeklyChallenge: () -> (opt WeeklyChallenge) query;
+  getWorkspace: (nation: NationId) -> (opt Workspace) query;
+  inviteFoundingAuthority: (nation: NationId, invitedEmail: text,
+   appointmentLabel: text) -> (SaveConstitutionResult);
+  isCallerAdmin: () -> (bool) query;
+  isCallerReviewer: () -> (bool) query;
+  isMemberDeparted: (nation: NationId, member: principal) -> (bool) query;
+  issueMembershipInvitation: (nation: NationId, invitedEmail: text) ->
+   (IssueInvitationResult);
+  listAmendmentProposals: (nation: NationId) -> (vec AmendmentProposal) query;
+  listAmendments: (nation: NationId) -> (vec Amendment) query;
+  listAppeals: (nation: NationId) -> (vec Appeal) query;
+  listAssignments: () -> (vec Assignment) query;
+  listAuthorityPositions: (nation: NationId) -> (vec AuthorityPosition) query;
+  listAuthorityTermEvents: (nation: NationId) ->
+   (vec AuthorityTermEvent) query;
+  listCalendarEvents: (nation: NationId) -> (vec CalendarEvent) query;
+  listCensusEntries: (nation: NationId) -> (vec CensusEntry) query;
+  listCommunitySubmissions: (community: CommunityId) ->
+   (vec DiscoverySubmission) query;
+  listConstitutionTemplates: () -> (vec GovernanceModelOption) query;
+  listConstitutionVersions: (nation: NationId) ->
+   (vec ConstitutionVersion) query;
+  listDiscussionPosts: (thread: DiscussionThreadId) ->
+   (vec DiscussionPost) query;
+  listDiscussionThreads: (nation: NationId) -> (vec DiscussionThread) query;
+  listDissolutions: (nation: NationId) -> (vec Dissolution) query;
+  listEmergencySuspensions: (nation: NationId) ->
+   (vec EmergencySuspension) query;
+  listExecutionAudit: (request: ExecutionRequestId) ->
+   (vec ExecutionAuditEntry) query;
+  listExecutionRequests: (nation: NationId) -> (vec ExecutionRequest) query;
+  listFileAttachments: (nation: NationId, target: FileAttachmentTarget) ->
+   (vec FileAttachment) query;
+  listFoundingAppointments: (nation: NationId) ->
+   (vec FoundingAppointment) query;
+  listGovernanceHistory: (nation: NationId) ->
+   (vec GovernanceHistoryEntry) query;
+  listGovernanceModelOptions: () -> (vec GovernanceModelOption) query;
+  listGovernanceProposals: (nation: NationId) ->
+   (vec GovernanceProposal) query;
+  listJoinRequests: (nation: NationId) -> (vec JoinRequest) query;
+  listLeads: (pathway: LeadPathway) -> (LeadList) query;
+  listMatchingCollaborators: (community: CommunityId) ->
+   (vec CollaborationProfile) query;
+  listMemberDepartures: (nation: NationId) -> (vec MemberDeparture) query;
+  listMyIntroductions: () -> (vec IntroductionRequest) query;
+  listMyNations: () -> (vec Nation) query;
+  listMyStakes: () -> (vec StakingView) query;
+  listNationDocuments: (nation: NationId) -> (vec NationDocument) query;
+  listNationFiles: (nation: NationId, folder: opt NationFolderId) ->
+   (vec NationFile) query;
+  listNationFolders: (nation: NationId) -> (vec NationFolder) query;
+  listNationMembers: (nation: NationId) -> (vec NationMember) query;
+  listNationProposals: (nation: NationId) -> (vec NationProposal) query;
+  listNationRoles: (nation: NationId) -> (vec GovernanceRole) query;
+  listNationTreasuryTransactions: (nation: NationId) ->
+   (vec NationTreasuryTransaction) query;
+  listNations: () -> (vec Nation) query;
+  listNetworkNations: () -> (vec NetworkNationProfile) query;
+  listPendingContributions: () -> (vec Contribution) query;
+  listPipelineInteractions: (itemId: PipelineItemId) ->
+   (vec PipelineInteraction) query;
+  listPipelineItems: (community: CommunityId) -> (vec PipelineItem) query;
+  listProposals: () -> (vec ProposalView) query;
+  listPublicComments: () -> (vec PublicComment) query;
+  listPublicSubmissions: () -> (vec DiscoverySubmission) query;
+  listRecommendations: (community: CommunityId) -> (vec Recommendation) query;
+  listRecordedVotes: (nation: NationId, decision: DecisionKind) ->
+   (vec RecordedVote) query;
+  listRoleAssignments: (nation: NationId) -> (vec RoleAssignment) query;
+  listRoleDelegations: (nation: NationId) -> (vec RoleDelegation) query;
+  listStakePresets: () -> (vec StakePreset) query;
+  listTreasuryTransactions: () -> (vec TreasuryTransaction) query;
+  listWaitlistEntries: () -> (vec WaitlistEntry) query;
+  listWorkspaceApps: (workspace: WorkspaceId) -> (vec WorkspaceApp) query;
+  lockStake: (amount: nat, termSeconds: nat) -> (StakingRecord);
+  moderateComment: (commentId: CommentId, status: CommentModerationStatus) ->
+   (ModerateCommentResult);
+  moveNationFile: (nation: NationId, file: NationFileId, folder:
+   opt NationFolderId) -> (MoveFileResult);
+  moveNationFolder: (nation: NationId, folder: NationFolderId, newParent:
+   opt NationFolderId) -> (RenameFolderResult);
+  openDissolutionVoting: (nation: NationId, dissolution: DissolutionId) ->
+   (SaveDissolutionResult);
+  postDiscussionReply: (thread: DiscussionThreadId, body: text) ->
+   (SaveDiscussionPostResult);
+  proposeAmendment: (nation: NationId, title: text, summary: text, changes:
+   vec RuleChange, votingDeadline: Timestamp) ->
+   (SaveAmendmentProposalResult);
+  proposeDissolution: (nation: NationId, proposal: text, explanation:
+   text) -> (SaveDissolutionResult);
+  raiseAssignmentPriority: (assignmentId: AssignmentId, additionalSrc: 
+   nat, newPriority: AssignmentPriority) -> ();
+  ratifyAmendment: (nation: NationId, proposal: AmendmentProposalId) ->
+   (RatifyAmendmentResult);
+  ratifyConstitution: (nation: NationId) -> (ActivateFoundingResult);
+  ratifySuccessionPlan: (nation: NationId) -> (RatifySuccessionPlanResult);
+  recordAuthorityDeparture: (nation: NationId, position: AuthorityPositionId,
+   kind: AuthorityTermEventKind, reason: text) ->
+   (RecordAuthorityTermEventResult);
+  recordCensusEntry: (nation: NationId, kind: CensusEventKind, subject:
+   principal, referenceId: nat, summary: text, confidential: bool,
+   constitutionVersion: nat) -> (RecordCensusResult);
+  recordChallengeImpression: (sessionId: VisitorSessionId) ->
+   (RecordImpressionResult);
+  recordDataExport: (nation: NationId, dissolution: DissolutionId,
+   exportReference: text) -> (SaveDissolutionResult);
+  recordMemberDeparture: (nation: NationId, member: principal, kind:
+   DepartureKind, notice: text) -> (SaveMemberDepartureResult);
+  recordObligationsReview: (nation: NationId, dissolution: DissolutionId,
+   note: text, outstandingObligations: vec text) -> (SaveDissolutionResult);
+  recordTreasuryTransaction: (category: TreasuryCategory, direction:
+   TreasuryDirection, amount: nat, description: text) ->
+   (TreasuryTransaction);
+  recuseFromAppeal: (appeal: AppealId, reason: text) -> (SaveAppealResult);
+  renameNationFile: (nation: NationId, file: NationFileId, name: text) ->
+   (SaveFileResult);
+  renameNationFolder: (nation: NationId, folder: NationFolderId, name:
+   text) -> (RenameFolderResult);
+  replaceFoundingAppointment: (nation: NationId, appointment: nat,
+   newAuthority: principal, appointmentLabel: text) ->
+   (SaveConstitutionResult);
+  reportComment: (sessionId: VisitorSessionId, commentId: CommentId, reason:
+   opt text) -> (ReportCommentResult);
+  requestAssignment: (title: text, description: text, srcToSpend: nat,
+   priority: AssignmentPriority) -> (AssignmentId);
+  requestEmergencySuspension: (nation: NationId, reason: text,
+   affectedAccounts: vec principal, affectedFunctions: vec text) ->
+   (SaveEmergencySuspensionResult);
+  requestExecution: (proposal: GovernanceProposalId) ->
+   (SaveExecutionRequestResult);
+  requestIntroduction: (target: CollaborationParty, message: text) ->
+   (RequestIntroductionResult);
+  respondToIntroduction: (requestId: IntroductionRequestId, approve: 
+   bool) -> (RespondIntroductionResult);
+  restoreEmergencySuspension: (nation: NationId, suspension:
+   EmergencySuspensionId, note: text) -> (RestoreEmergencySuspensionResult);
+  resumeLaunch: (nation: NationId) -> (ResumeLaunchResult);
+  reviewContribution: (contributionId: ContributionId, decision:
+   variant {
+     approve: nat;
+     reject;
+   }, rationale: text) -> ();
+  reviewJoinRequest: (nation: NationId, request: JoinRequestId, approve:
+   bool) -> (ReviewJoinRequestResult);
+  reviewMemberDeparture: (nation: NationId, departure: MemberDepartureId,
+   reviewNote: text) -> (SaveMemberDepartureResult);
+  revokeDelegation: () -> ();
+  revokeRole: (nation: NationId, assignment: RoleAssignmentId) ->
+   (SaveRoleAssignmentResult);
+  revokeRoleDelegation: (nation: NationId, delegation: RoleDelegationId) ->
+   (SaveRoleDelegationResult);
+  saveCollaborationProfile: (profile: CollaborationProfile) ->
+   (SaveCollaborationProfileResult);
+  saveCommunityProfile: (profile: CommunityProfile) ->
+   (SaveCommunityProfileResult);
+  saveConstitution: (nation: NationId, templateKey: text, rules:
+   GovernanceRuleSet) -> (SaveConstitutionResult);
+  saveLeadNote: (leadId: LeadId, note: opt text) -> (UpdateLeadResult);
+  saveMembershipVotingConfig: (nation: NationId, config:
+   MembershipVotingConfig) -> (SaveMembershipVotingResult);
+  saveNationTheme: (nation: NationId, theme: NationTheme) ->
+   (SaveNationThemeResult);
+  savePrivacySettings: (settings: PrivacySettings) ->
+   (SavePrivacySettingsResult);
+  saveRolePermissions: (nation: NationId, entries:
+   vec RolePermissionEntry) -> (SavePrivacySettingsResult);
+  saveSuccessionPlan: (nation: NationId, plan: SuccessionRecoveryPlan) ->
+   (SaveSuccessionPlanResult);
+  schema: () -> (text) query;
+  searchDirectory: (term: text, kind: opt DirectoryEntryKind) ->
+   (vec DirectoryEntry) query;
+  setExecutionPaused: (nation: NationId, paused: bool) ->
+   (SaveExecutionRequestResult);
+  setNetworkOptIn: (nation: NationId, optIn: bool) -> (SetNetworkOptInResult);
+  setReviewerRole: (user: principal, isReviewer: bool) -> ();
+  startChallenge: (sessionId: VisitorSessionId) -> (StartChallengeResult);
+  submitChallengeResponse: (sessionId: VisitorSessionId, optionId: nat,
+   reasoning: opt text) -> (SubmitChallengeResponseResult);
+  submitContribution: (contributionType: ContributionType, notes: text,
+   links: vec text) -> (ContributionId);
+  submitDiscoverySubmission: (community: CommunityId, body: text, category:
+   text, visibility: SubmissionVisibility) -> (SubmitDiscoveryResult);
+  submitEarlyAccessLead: (name: text, email: text, organization: opt text,
+   organizationType: opt OrganizationType, intendedDaoUseCase: opt text,
+   consentToContact: bool) -> (SubmitLeadResult);
+  submitFoundingOrganizationLead: (organization: text, contactName: text,
+   email: text, intendedDeployment: opt text, prepaidInterest: opt bool,
+   budgetRange: opt text, consentToContact: bool) -> (SubmitLeadResult);
+  submitJoinRequest: (nation: NationId, displayName: text, message: text) ->
+   (SubmitJoinRequestResult);
+  submitPublicComment: (sessionId: VisitorSessionId, displayName: opt text,
+   body: text) -> (SubmitCommentResult);
+  submitStrategicFundingLead: (contactName: text, organization: opt text,
+   email: text, intendedSupport: opt FundingSupportType, budgetRange:
+   opt text, consentToContact: bool) -> (SubmitLeadResult);
+  submitWaitlistEntry: (name: text, email: text, organization: opt text,
+   interestArea: opt WaitlistInterestArea) -> (WaitlistSubmitResult);
+  unlockStake: (id: StakingId) -> (StakingRecord);
+  updateEmissionSchedule: (initialEmission: nat, halvingIntervalMonths:
+   nat) -> (Result);
+  updateLeadStatus: (leadId: LeadId, status: LeadStatus) ->
+   (UpdateLeadResult);
+  updateRoleCapabilities: (nation: NationId, role: GovernanceRoleId,
+   capabilities: vec GovernanceCapability) -> (SaveRoleResult);
+  updateTokenomicsConfig: (allocations: vec TokenAllocation) -> (Result);
+  validateGovernanceRuleSet: (rules: GovernanceRuleSet) ->
+   (opt GovernanceError) query;
+  withdrawDissolution: (nation: NationId, dissolution: DissolutionId) ->
+   (SaveDissolutionResult);
+  withdrawJoinRequest: (nation: NationId, request: JoinRequestId) ->
+   (ReviewJoinRequestResult);
+  withdrawMemberDeparture: (nation: NationId, departure:
+   MemberDepartureId) -> (SaveMemberDepartureResult);
+}

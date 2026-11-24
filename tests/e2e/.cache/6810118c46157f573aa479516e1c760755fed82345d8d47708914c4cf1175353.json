@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:47:46.247Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Close\" in \"Treasury\"",
+        "target": {
+          "role": "button",
+          "name": "Close",
+          "within": "Treasury"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Community Economy — future phase\" in \"The sovereign governance ecosystem\"",
+        "target": {
+          "role": "button",
+          "name": "Community Economy — future phase",
+          "within": "The sovereign governance ecosystem"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-modules.e2e.ts::dao-preview-modules",
+      "targetId": "web",
+      "instructionDigest": "702fa0a838af6843f1d5bca206ef8817261c7ec339563b47cbb388fc2dc10a1a",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Closed the Treasury dialog and pressed \"Community Economy — future phase\" on /dao-preview. A dialog opened titled \"Community Economy\" showing \"Future phase\" and its description (\"Rewards for the work that keeps a Nation running.\").",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Community Economy"
+      },
+      {
+        "text": "Future phase"
+      },
+      {
+        "text": "Rewards for the work that keeps a Nation running."
+      },
+      {
+        "text": "A later phase: participation credits and contribution rewards that recognize the members who show up, designed to stay separate from governance power."
+      },
+      {
+        "role": "dialog",
+        "name": "Community Economy"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Treasury"
+      },
+      {
+        "text": "Implemented today"
+      },
+      {
+        "text": "Shared funds with a transparent ledger."
+      },
+      {
+        "text": "Track balances, allocations and spending in one place. Every movement is visible to members, and payouts follow the approvals your rules require."
+      },
+      {
+        "role": "dialog",
+        "name": "Treasury"
+      }
+    ],
+    "endWaitMs": 10788,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

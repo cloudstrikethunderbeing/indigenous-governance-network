@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T03:51:13.282Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Continue\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "button",
+          "name": "Continue",
+          "within": "Deploy a Nation"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-os.e2e.ts::launch-nation-os",
+      "targetId": "web",
+      "instructionDigest": "699911f58e20d87289c88a4864ccea9e6a2f53cc142779be713d264defba96fd",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Kept the recommended membership (Invitation only) and voting (Simple majority, quorum 50%, approval 60%) settings and pressed Continue. The launcher advanced to step 4 \"Select your applications and theme\" with recommended apps and Light theme preselected.",
+    "startPath": "/os/launcher",
+    "endPath": "/os/launcher",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Select your applications and theme"
+      },
+      {
+        "text": "Choose which apps appear in your Nation workspace, then pick how it looks. You can add or remove apps later."
+      },
+      {
+        "text": "Applications"
+      },
+      {
+        "role": "checkbox",
+        "name": "Dashboard The Nation's workspace at a glance.",
+        "states": [
+          "checked"
+        ]
+      },
+      {
+        "text": "The Nation's workspace at a glance."
+      },
+      {
+        "role": "checkbox",
+        "name": "Governance Proposals, votes and decisions.",
+        "states": [
+          "checked"
+        ]
+      },
+      {
+        "text": "Proposals, votes and decisions."
+      },
+      {
+        "role": "checkbox",
+        "name": "Discussions Community conversation threads.",
+        "states": [
+          "checked"
+        ]
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Configure membership and voting"
+      },
+      {
+        "text": "Decide who belongs to your Nation and how a proposal is decided. You can refine these rules later in Nation Settings."
+      },
+      {
+        "text": "Membership model"
+      },
+      {
+        "role": "radio",
+        "name": "Invitation only Members join only when an administrator invites them.",
+        "states": [
+          "checked"
+        ]
+      },
+      {
+        "text": "Invitation only"
+      },
+      {
+        "text": "Members join only when an administrator invites them."
+      },
+      {
+        "role": "radio",
+        "name": "Request and approval People ask to join and an administrator approves each request."
+      },
+      {
+        "text": "Request and approval"
+      }
+    ],
+    "endWaitMs": 10977,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

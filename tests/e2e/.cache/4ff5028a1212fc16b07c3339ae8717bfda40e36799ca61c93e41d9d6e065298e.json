@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T04:08:23.452Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Deploy a Nation — Working. Launch a new…\" in \"Apps — solid dot working, dashed ring p…\"",
+        "target": {
+          "role": "link",
+          "name": "Deploy a Nation — Working. Launch a new Nation in five guided steps.",
+          "within": "Apps — solid dot working, dashed ring preview"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Sign in with Internet Identity\" in \"Sign in to launch your Nation OS\"",
+        "target": {
+          "role": "button",
+          "name": "Sign in with Internet Identity",
+          "within": "Sign in to launch your Nation OS"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-os.e2e.ts::launch-nation-os",
+      "targetId": "web",
+      "instructionDigest": "f264e20cb2dd55d97146ac023d298a06f016d67b968bdf439d60b47d4f157708",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Sign-in completed via Internet Identity; the launcher now shows the signed-in deployer as Founding Authority #1 (paedg-xzwty-...) and the \"Name your Nation\" step 1 of 6 form with name, description and region fields. No name was entered.",
+    "startPath": "/",
+    "endPath": "/os/launcher",
+    "endAnchors": [
+      {
+        "text": "Nation workspace"
+      },
+      {
+        "role": "heading",
+        "name": "Deploy a Nation"
+      },
+      {
+        "role": "button",
+        "name": "Search apps and documents"
+      },
+      {
+        "role": "button",
+        "name": "Notifications"
+      },
+      {
+        "role": "button",
+        "name": "Help"
+      },
+      {
+        "role": "button",
+        "name": "Nation settings"
+      },
+      {
+        "text": "Launch a new Nation in five guided steps."
+      },
+      {
+        "text": "Working"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Desktop"
+      },
+      {
+        "role": "button",
+        "name": "Help — replay the introduction"
+      },
+      {
+        "role": "heading",
+        "name": "Open the Cedar River Nation workspace"
+      },
+      {
+        "text": "A Nation workspace is a private, community-controlled home for a Nation's governance, discussions, documents, calendar and treasury. Each Nation decides what stays private and what it shares."
+      },
+      {
+        "role": "link",
+        "name": "Open workspace"
+      },
+      {
+        "text": "Apps — solid dot working, dashed ring preview"
+      },
+      {
+        "role": "button",
+        "name": "Skip the introduction"
+      },
+      {
+        "role": "heading",
+        "name": "Welcome to Your Nation's Digital Future"
+      }
+    ],
+    "endWaitMs": 10193,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

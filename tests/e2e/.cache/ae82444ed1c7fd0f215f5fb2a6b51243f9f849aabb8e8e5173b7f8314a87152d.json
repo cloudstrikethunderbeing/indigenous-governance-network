@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:52:16.816Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Reveal Your Nation\" in \"Step 06 / 06\"",
+        "target": {
+          "role": "button",
+          "name": "Reveal Your Nation",
+          "within": "Step 06 / 06"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-final-reveal.e2e.ts::dao-preview-final-reveal",
+      "targetId": "web",
+      "instructionDigest": "d6ffee71fa3c2e7a1cc35546ef7ae3a22c3234221f73a72349598f10ac5608b6",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Pressed \"Reveal Your Nation\" on step 06/06 of /dao-preview. A reveal overlay opened showing \"The reveal\" with the heading \"Your Nation. Your Rules. Your Governance.\", a Close reveal button, Explore Live DAO Demo / Deploy Your Own DAO links, and the note that nothing was created.",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "role": "button",
+        "name": "Close reveal"
+      },
+      {
+        "text": "The reveal"
+      },
+      {
+        "text": "This was a visual demonstration. Nothing was created — no Nation, no deployment and no governance record."
+      }
+    ],
+    "endWaitMs": 10830,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

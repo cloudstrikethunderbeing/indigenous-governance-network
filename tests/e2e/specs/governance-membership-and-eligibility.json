@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "governance-membership-and-eligibility",
+    "kind": "interactive",
+    "goal": "See the membership request queue, voting eligibility status and governance history in Governance",
+    "requirementIndexes": [],
+    "acceptanceCriteriaIndexes": [],
+    "startPath": "/os/governance",
+    "steps": [
+      "Open the Governance app",
+      "Open the Members section",
+      "Open the Decisions section",
+      "Open the Activity section"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Our Rules"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Members"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Decisions"
+      },
+      {
+        "afterStep": 3,
+        "expectText": "Activity"
+      }
+    ]
+  }
+}

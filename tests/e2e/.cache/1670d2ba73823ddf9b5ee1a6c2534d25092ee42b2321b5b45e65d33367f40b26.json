@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:47:46.237Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Constitution — implemented today\" in \"The sovereign governance ecosystem\"",
+        "target": {
+          "role": "button",
+          "name": "Constitution — implemented today",
+          "within": "The sovereign governance ecosystem"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-modules.e2e.ts::dao-preview-modules",
+      "targetId": "web",
+      "instructionDigest": "e733e53fcd43a99893dfbff6a31e1e25b0383b6eca77767f3c9845f1652d0540",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Pressed \"Constitution — implemented today\" on /dao-preview; a Constitution dialog opened showing \"Implemented today\" and its description (\"The written rules every decision answers to.\").",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "role": "button",
+        "name": "Close module details"
+      },
+      {
+        "role": "heading",
+        "name": "Constitution"
+      },
+      {
+        "text": "Implemented today"
+      },
+      {
+        "role": "button",
+        "name": "Close"
+      },
+      {
+        "text": "The written rules every decision answers to."
+      },
+      {
+        "text": "Your founding document: membership thresholds, voting rules and the safeguards that protect them. Amendments follow the same approved process as any other decision."
+      },
+      {
+        "role": "dialog",
+        "name": "Constitution"
+      }
+    ],
+    "endWaitMs": 10755,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

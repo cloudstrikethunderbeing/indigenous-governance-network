@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:43:46.621Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Decisions\" in \"Governance\"",
+        "target": {
+          "role": "button",
+          "name": "Decisions",
+          "within": "Governance"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "governance-membership-and-eligibility.e2e.ts::governance-membership-and-eligibility",
+      "targetId": "web",
+      "instructionDigest": "a3bdc319da81c4b6eec3d691e0e9d51c53db8fdebd9b9d902e8bc957a390a062",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Tapped the Decisions section in the Governance window. The view now shows heading \"Decisions\" with \"What your community is deciding right now.\" and \"No proposals yet\" / \"This sample Nation has no proposals to show right now.\"",
+    "startPath": "/os/governance",
+    "endPath": "/os/governance",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Decisions"
+      },
+      {
+        "text": "What your community is deciding right now."
+      },
+      {
+        "text": "No proposals yet"
+      },
+      {
+        "text": "This sample Nation has no proposals to show right now."
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Members"
+      },
+      {
+        "text": "Who belongs, and what each person may do."
+      },
+      {
+        "text": "These permissions are enforced by your organization’s own system, not by what this screen shows."
+      },
+      {
+        "text": "Participation"
+      },
+      {
+        "text": "How many people in your organization are taking part. Individual choices stay private."
+      },
+      {
+        "text": "People who can take part"
+      },
+      {
+        "text": "People taking part"
+      },
+      {
+        "role": "progressbar",
+        "name": "0 of 0 people are taking part"
+      }
+    ],
+    "endWaitMs": 10821,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

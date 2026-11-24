@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:47:46.239Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Close\" in \"Constitution\"",
+        "target": {
+          "role": "button",
+          "name": "Close",
+          "within": "Constitution"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Three Founding Authorities — implemente…\" in \"The sovereign governance ecosystem\"",
+        "target": {
+          "role": "button",
+          "name": "Three Founding Authorities — implemented today",
+          "within": "The sovereign governance ecosystem"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-modules.e2e.ts::dao-preview-modules",
+      "targetId": "web",
+      "instructionDigest": "6c535ae699d046177a77269bbddade8a617a9ff459246bb0da166e2368596e4c",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Closed the Constitution dialog and pressed \"Three Founding Authorities — implemented today\" on /dao-preview. A dialog opened titled \"Three Founding Authorities\" showing \"Implemented today\" and its description (\"Three distinct people must accept before activation.\").",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Three Founding Authorities"
+      },
+      {
+        "text": "Three distinct people must accept before activation."
+      },
+      {
+        "text": "The creator becomes Founding Authority #1 and appoints two more by secure invitation. Each accepts independently with Internet Identity, so no single person can activate a Nation alone."
+      },
+      {
+        "text": "Step 05 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Governance"
+      },
+      {
+        "text": "Proposals, debate and voting with a clear tally — enforced by the constitution, not by whoever holds the keys."
+      },
+      {
+        "role": "dialog",
+        "name": "Three Founding Authorities"
+      },
+      {
+        "role": "region",
+        "name": "Your Governance"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Constitution"
+      },
+      {
+        "text": "The written rules every decision answers to."
+      },
+      {
+        "text": "Your founding document: membership thresholds, voting rules and the safeguards that protect them. Amendments follow the same approved process as any other decision."
+      },
+      {
+        "text": "Step 01 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Digital Community"
+      },
+      {
+        "text": "A private home for your people — members, roles and a shared place to work, with nothing public until you decide it is."
+      },
+      {
+        "role": "dialog",
+        "name": "Constitution"
+      },
+      {
+        "role": "region",
+        "name": "Your Digital Community"
+      }
+    ],
+    "endWaitMs": 10793,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

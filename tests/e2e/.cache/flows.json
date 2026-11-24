@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "flows": {
+    "dao-preview-final-reveal": {
+      "flowId": "dao-preview-final-reveal",
+      "specDigest": "3c00f28c6f31a5ad87d2ffb4db83538d002e5c8ba1dfe7c53a99b19465fdcde1",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T02:52:22.333Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "d8b31dfc660f89cf2b9e097a88805f4a55c3cdcddbe4736a824351b95aa26da0.json",
+        "dbac16d46789a6bd5102777cbba701926ed14c2b0e9d48ef6c5765684f043588.json",
+        "3a5701a8d8779a47d88f4ac11e3d896563cdb3aeb8ab6b8fa9606e747f58da5a.json",
+        "f79826df0a86b3ad6575b84d68715e19b5dcafa9845077fe272ccc381f3efc49.json",
+        "3042c446202867b21a7104726b54576efdb2c141f330984d930f5a32676ce5fa.json",
+        "725a5e592b0752d51ed47081d71a4feb82a50c84216c2a8b6d0e6e154a05365b.json",
+        "ae82444ed1c7fd0f215f5fb2a6b51243f9f849aabb8e8e5173b7f8314a87152d.json"
+      ],
+      "noChangeSteps": [
+        0
+      ],
+      "ranAfter": [
+        "dao-preview-modules"
+      ],
+      "ranWith": [
+        "dao-preview-modules"
+      ],
+      "passedTree": "2d2a1858abefa355451bee4c82867c85c72a2030",
+      "visitedPaths": [
+        "/deploy",
+        "/dao-preview"
+      ],
+      "readOnly": true
+    },
+    "dao-preview-modules": {
+      "flowId": "dao-preview-modules",
+      "specDigest": "c77054c2bd3c41bf906decf693a242b494512e122096361986e4a001cd463159",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T02:52:22.332Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "38c63b6da8faf0a2eacbc55bce07d53e957391d409833982846405820da6c964.json",
+        "1670d2ba73823ddf9b5ee1a6c2534d25092ee42b2321b5b45e65d33367f40b26.json",
+        "be2ebb6efb2e4d39932eb3f69455be39518ca012a4d200352eb83f5073159017.json",
+        "d4a7f111c2f2c3ae728bf0560517f54a556758d524c363dd616239643540d9d0.json",
+        "89876b0e4037034b00f0d6792cdc00d864b991f6b165871f907da77426504f25.json",
+        "5b2209a3e7feab66c10bc4d1061aa6ff1f193e00e33f0f097b91612950b614f5.json",
+        "95cae3ba81f8bef244ac4c5ac02a53555a026ec35a2e544eb6bc8e01d8c4b33c.json",
+        "8da26d2580f480ed8a2343a1f653eba00bc123aa001d5e5b9f3b84e92e459b9f.json",
+        "6810118c46157f573aa479516e1c760755fed82345d8d47708914c4cf1175353.json",
+        "b4d0417cf1cf1222e232b8efd574081d81966967371636c8f2dee729c28e3838.json",
+        "8ff110ff00d02d13f587668c5e81c987dff48a129464a3db7dd2cff5c5bcf592.json"
+      ],
+      "noChangeSteps": [
+        0
+      ],
+      "ranAfter": [],
+      "ranWith": [],
+      "passedTree": "2d2a1858abefa355451bee4c82867c85c72a2030",
+      "visitedPaths": [
+        "/deploy",
+        "/dao-preview"
+      ],
+      "readOnly": true
+    },
+    "founding-seat-visible": {
+      "flowId": "founding-seat-visible",
+      "specDigest": "0b302482e7350d74fe51f596da3987ec4e36d0fe528dc84834918bf42cd92263",
+      "status": "record-failed",
+      "recordedAt": "2026-11-24T04:09:20.459Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "52e49f424e35c195b4cd562dd20d8b12cb3279206acb9053bcd6f5e687c82efd.json",
+        "879835a9384dd87ab34108a936ac6d7dace6f405b2629a69aaad427042597034.json",
+        "f3a5261b938e30e365a374210fac4271f7157fbd84b2fca61ceefc635ccae7e8.json"
+      ],
+      "quarantined": true,
+      "quarantineFailure": "at steps[2] (\"Press Open the Control Center\"): expect ASSERTION_FAILED: expect.toBeVisible failed locator: getByText(/(?<![\\d.,+*\\u00D7xX\\u2212-])(?<!\\d[/:,])1\\/3(?!\\d|[-/:.,\\s\\u00D7xX*]\\d)/, visible: true).first() expected: visible observed: no node (match count 0)"
+    },
+    "governance-membership-and-eligibility": {
+      "flowId": "governance-membership-and-eligibility",
+      "specDigest": "28d2d4c8ac0865e8751dcf233a4bd176d4316a324c400f84a14783f295e2055d",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T02:43:46.694Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "c53667f81ac8a6b62a604d317f1f8314b026bfcd92d9b67a3ca4ba7d3e63ac01.json",
+        "424bb8c02562c5b6e6e7f9e789e94fc067e09c9fd5c85fec4f71e9cf1c6fc640.json",
+        "233a4c61e910eb58829ae94bd397b20d41db521e662caf97646c00d06e19ac89.json"
+      ],
+      "noChangeSteps": [
+        0
+      ],
+      "ranAfter": [
+        "dao-preview-final-reveal",
+        "dao-preview-modules"
+      ],
+      "ranWith": [
+        "dao-preview-final-reveal",
+        "dao-preview-modules"
+      ],
+      "passedTree": "2d2a1858abefa355451bee4c82867c85c72a2030",
+      "visitedPaths": [
+        "/os/governance"
+      ]
+    },
+    "launch-nation-os": {
+      "flowId": "launch-nation-os",
+      "specDigest": "a0550b3e7de8cf69818c72920803dfd8e4a2a2f29d175f9e293ba3cc78de4701",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T04:09:20.450Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "4ff5028a1212fc16b07c3339ae8717bfda40e36799ca61c93e41d9d6e065298e.json",
+        "cd4b5103f7d8755baee899c5570105cd461ce06992ed437900aa023456e4056a.json",
+        "0f3dd748464ca05d48c37d805fdd597bb486032e8fffec7304971b1554a8b011.json",
+        "03feaccb9063625d6b5340c34da743829e9140477b068a23015e168830dff99d.json",
+        "f8e82e68704148bdeea0c91275ea00f3df9412aa7857f6da83837af1993a17da.json",
+        "e05e09f313ff6eb972305e3b1b18960a3993ecb66e2faed899c37b29b930ad03.json",
+        "00f1456b32b1f587a2cc1fe183291fe491a21ad8dde0206b50901e3aeaad403b.json"
+      ],
+      "ranAfter": [],
+      "ranWith": []
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:47:46.249Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Close\" in \"Community Economy\"",
+        "target": {
+          "role": "button",
+          "name": "Close",
+          "within": "Community Economy"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Reveal Your Nation\" in \"Step 06 / 06\"",
+        "target": {
+          "role": "button",
+          "name": "Reveal Your Nation",
+          "within": "Step 06 / 06"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Close reveal\"",
+        "target": {
+          "role": "button",
+          "name": "Close reveal"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Restart\" in \"Step 06 / 06\"",
+        "target": {
+          "role": "button",
+          "name": "Restart",
+          "within": "Step 06 / 06"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Next\" in \"Step 01 / 06\"",
+        "target": {
+          "role": "button",
+          "name": "Next",
+          "within": "Step 01 / 06"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-modules.e2e.ts::dao-preview-modules",
+      "targetId": "web",
+      "instructionDigest": "c48d5eba7bdac4228c02bdc061e819fdc552a056696603157f065414deff6b99",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Closed the Community Economy dialog, restarted the sequence, and pressed Next. The sequence advanced from Step 01 / 06 (\"Your Digital Community\") to Step 02 / 06 (\"Your Constitution\"), with Back now enabled.",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "text": "Step 02 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Constitution"
+      },
+      {
+        "text": "Write the rules once, in plain language. Thresholds, safeguards and amendment paths become the reference for every decision."
+      },
+      {
+        "role": "button",
+        "name": "Next"
+      },
+      {
+        "role": "region",
+        "name": "Your Constitution"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "button",
+        "name": "Close module details"
+      },
+      {
+        "role": "heading",
+        "name": "Community Economy"
+      },
+      {
+        "text": "Future phase"
+      },
+      {
+        "role": "button",
+        "name": "Close"
+      },
+      {
+        "text": "Rewards for the work that keeps a Nation running."
+      },
+      {
+        "text": "A later phase: participation credits and contribution rewards that recognize the members who show up, designed to stay separate from governance power."
+      },
+      {
+        "text": "Step 06 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Sovereign Digital Ecosystem"
+      }
+    ],
+    "endWaitMs": 10752,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:48:26.658Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Maybe Later\" in \"A demonstration, not a binding vote\"",
+        "target": {
+          "role": "button",
+          "name": "Maybe Later",
+          "within": "A demonstration, not a binding vote"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Launch Your DAO — Visual Demo\" in \"Visual demo\"",
+        "target": {
+          "role": "link",
+          "name": "Launch Your DAO — Visual Demo",
+          "within": "Visual demo"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-final-reveal.e2e.ts::dao-preview-final-reveal",
+      "targetId": "web",
+      "instructionDigest": "664d6f14c166b825b066f952ffd71f067d8cee3b50489f8cdc2966fdf65ff29d",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Dismissed the welcome dialog (\"Maybe Later\") and pressed \"Launch Your DAO — Visual Demo\". The app navigated to /dao-preview, showing \"Your Nation. Your Rules. Your Governance.\", the seven-module ecosystem, and the step sequence at \"Step 01 / 06\" with a Next button.",
+    "startPath": "/deploy",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "text": "Visual demo · creates nothing"
+      },
+      {
+        "text": "Launch Your DAO — Visual Demo"
+      },
+      {
+        "role": "heading",
+        "name": "Your Nation. Your Rules. Your Governance."
+      },
+      {
+        "text": "A sovereign digital community, written in your own constitution and governed by your own people."
+      },
+      {
+        "role": "heading",
+        "name": "The sovereign governance ecosystem"
+      },
+      {
+        "text": "Constitution"
+      },
+      {
+        "text": "Live"
+      },
+      {
+        "text": "Three Founding Authorities"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "alert",
+        "name": "We could not record this visit. You can still explore the challenge below."
+      },
+      {
+        "role": "button",
+        "name": "Dismiss welcome message"
+      },
+      {
+        "text": "A demonstration, not a binding vote"
+      },
+      {
+        "role": "heading",
+        "name": "YOUR VOICE MATTERS. EXPERIENCE A DAO."
+      },
+      {
+        "text": "What would it look like for a community to participate in the decisions that shape its future — using technology it owns and controls?"
+      },
+      {
+        "role": "button",
+        "name": "Explore a DAO Challenge"
+      },
+      {
+        "role": "button",
+        "name": "Maybe Later"
+      },
+      {
+        "role": "link",
+        "name": "The $500,000 Raise"
+      }
+    ],
+    "endWaitMs": 10884,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

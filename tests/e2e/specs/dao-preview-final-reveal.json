@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "dao-preview-final-reveal",
+    "kind": "interactive",
+    "goal": "Reach the final reveal of the visual demo and see both actions",
+    "requirementIndexes": [],
+    "acceptanceCriteriaIndexes": [],
+    "startPath": "/deploy",
+    "steps": [
+      "Open the Deploy page",
+      "Press Launch Your DAO — Visual Demo",
+      "Press Next",
+      "Press Next",
+      "Press Next",
+      "Press Next",
+      "Press Next",
+      "Press Reveal Your Nation"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Launch Your DAO — Visual Demo"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Your Nation. Your Rules. Your Governance."
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Your Constitution"
+      },
+      {
+        "afterStep": 3,
+        "expectText": "Your Founding Authorities"
+      },
+      {
+        "afterStep": 4,
+        "expectText": "Your Membership"
+      },
+      {
+        "afterStep": 5,
+        "expectText": "Your Governance"
+      },
+      {
+        "afterStep": 6,
+        "expectText": "Your Sovereign Digital Ecosystem"
+      },
+      {
+        "afterStep": 7,
+        "expectText": "YOUR NATION. YOUR RULES. YOUR GOVERNANCE."
+      },
+      {
+        "afterStep": 7,
+        "expectText": "Explore Live DAO Demo"
+      },
+      {
+        "afterStep": 7,
+        "expectText": "Deploy Your Own DAO"
+      }
+    ]
+  }
+}

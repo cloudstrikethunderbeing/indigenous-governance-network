@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:48:26.659Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Next\" in \"Step 01 / 06\"",
+        "target": {
+          "role": "button",
+          "name": "Next",
+          "within": "Step 01 / 06"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-final-reveal.e2e.ts::dao-preview-final-reveal",
+      "targetId": "web",
+      "instructionDigest": "c48d5eba7bdac4228c02bdc061e819fdc552a056696603157f065414deff6b99",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Pressed Next on the /dao-preview step sequence; it advanced from \"Step 01 / 06\" (Your Digital Community) to \"Step 02 / 06\" (Your Constitution), and the Back button became enabled.",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "text": "Step 02 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Constitution"
+      },
+      {
+        "text": "Write the rules once, in plain language. Thresholds, safeguards and amendment paths become the reference for every decision."
+      },
+      {
+        "role": "region",
+        "name": "Your Constitution"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "Step 01 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Digital Community"
+      },
+      {
+        "text": "A private home for your people — members, roles and a shared place to work, with nothing public until you decide it is."
+      },
+      {
+        "role": "region",
+        "name": "Your Digital Community"
+      }
+    ],
+    "endWaitMs": 10851,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

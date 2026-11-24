@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T04:02:16.550Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap link \"Governance\"",
+        "target": {
+          "role": "link",
+          "name": "Governance"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Control Center\" in \"Governance\"",
+        "target": {
+          "role": "button",
+          "name": "Control Center",
+          "within": "Governance"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "founding-seat-visible.e2e.ts::founding-seat-visible",
+      "targetId": "web",
+      "instructionDigest": "4c3ebba2760cc89c786cd14b6f7f767edfa9eacdf46688b365e5b107487d1ab1",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Opened Governance from the sidebar and selected the Control Center view. The Governance window now shows the Control Center section (\"The Nation's state, succession plan and recovery.\") with an \"Open the Control Center\" link, which was not pressed.",
+    "startPath": "/os/settings",
+    "endPath": "/os/governance",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Governance"
+      },
+      {
+        "text": "Proposals, votes and decisions."
+      },
+      {
+        "role": "link",
+        "name": "Close Governance"
+      },
+      {
+        "role": "heading",
+        "name": "Our Rules"
+      },
+      {
+        "text": "The rules your organization agrees to follow."
+      },
+      {
+        "text": "Setup progress"
+      },
+      {
+        "text": "15% complete"
+      },
+      {
+        "role": "progressbar",
+        "name": "2 of 13 governance areas set up"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Nation Settings"
+      },
+      {
+        "text": "Governance model, roles and privacy."
+      },
+      {
+        "role": "link",
+        "name": "Close Nation Settings"
+      },
+      {
+        "text": "Nation settings"
+      },
+      {
+        "role": "heading",
+        "name": "Governance, roles and privacy"
+      },
+      {
+        "text": "How the Nation makes decisions, who may do what, and which content other Nations may read."
+      },
+      {
+        "text": "These settings belong to the simulated sample Nation. Changes here are sample-only and never affect another Nation."
+      },
+      {
+        "role": "heading",
+        "name": "Governance model"
+      }
+    ],
+    "endWaitMs": 10896,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

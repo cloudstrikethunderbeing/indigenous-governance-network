@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T03:51:13.280Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "type",
+        "summary": "type \"River Nation\" into textbox \"Nation or organization name\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "textbox",
+          "name": "Nation or organization name",
+          "placeholder": "e.g. Cedar River Nation",
+          "within": "Deploy a Nation"
+        },
+        "value": "River Nation"
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Continue\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "button",
+          "name": "Continue",
+          "within": "Deploy a Nation"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-os.e2e.ts::launch-nation-os",
+      "targetId": "web",
+      "instructionDigest": "34038ae1942e90b240cc1396c33dc4cc4bfbc30655764f824d5e0588399741a0",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Typed \"River Nation\" into the Nation name field and pressed Continue. The launcher advanced to step 2 \"Choose governance\", and the constitution preview reads \"Constitution of River Nation\".",
+    "startPath": "/os/launcher",
+    "endPath": "/os/launcher",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "How should your community decide?"
+      },
+      {
+        "text": "Start from an example, then choose how decisions are made. Every template is an example — none of them assumes your organization’s legal or traditional governance authority."
+      },
+      {
+        "text": "Start from an example"
+      },
+      {
+        "text": "Community"
+      },
+      {
+        "text": "Recommended"
+      },
+      {
+        "text": "Example"
+      },
+      {
+        "text": "For a neighbourhood or interest group making shared choices together."
+      },
+      {
+        "text": "Indigenous Nation"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Name your Nation or organization"
+      },
+      {
+        "text": "This is how your community will see itself across the workspace. You can change it later in Nation Settings."
+      },
+      {
+        "text": "Nation or organization name"
+      },
+      {
+        "role": "textbox",
+        "name": "Nation or organization name",
+        "placeholder": "e.g. Cedar River Nation"
+      },
+      {
+        "text": "Short description"
+      },
+      {
+        "role": "textbox",
+        "name": "Short description",
+        "placeholder": "One or two sentences about what your community does."
+      },
+      {
+        "text": "0/240 characters"
+      },
+      {
+        "text": "Region"
+      }
+    ],
+    "endWaitMs": 10985,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

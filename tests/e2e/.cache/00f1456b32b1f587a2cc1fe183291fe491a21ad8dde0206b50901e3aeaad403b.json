@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T04:08:23.460Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tapAt",
+        "summary": "tap the point (367, 579) on region \"Deploy a Nation window\"",
+        "point": {
+          "x": 367,
+          "y": 579
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "region",
+            "name": "Deploy a Nation window"
+          },
+          "fx": 0.0905,
+          "fy": 0.8715
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (360, 582) on region \"Deploy a Nation window\"",
+        "point": {
+          "x": 360,
+          "y": 582
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "region",
+            "name": "Deploy a Nation window"
+          },
+          "fx": 0.0832,
+          "fy": 0.8729
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (360, 582) on region \"Deploy a Nation window\"",
+        "point": {
+          "x": 360,
+          "y": 582
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "region",
+            "name": "Deploy a Nation window"
+          },
+          "fx": 0.0832,
+          "fy": 0.8729
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap node \"I confirm these governance rules\" in \"Deploy a Nation\"",
+        "target": {
+          "text": "I confirm these governance rules",
+          "within": "Deploy a Nation"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Launch your Nation OS\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "button",
+          "name": "Launch your Nation OS",
+          "within": "Deploy a Nation"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-os.e2e.ts::launch-nation-os",
+      "targetId": "web",
+      "instructionDigest": "0fd3aaea385c33ee584d6488f7159fb369d830e5846df0a365ec0880c210e2e2",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Checked \"I confirm these governance rules\" (enabled the launch button) and pressed \"Launch your Nation OS\". The launcher created River Nation: screen now shows \"River Nation is created\", status Pending Activation, founding progress 1/3 accepted with the signed-in user as Founding Authority #1, plus…",
+    "startPath": "/os/launcher",
+    "endPath": "/os/launcher",
+    "endAnchors": [
+      {
+        "text": "River Nation is created"
+      },
+      {
+        "text": "Your Nation, its constitution and your founding seat are saved. It is pending activation until all three founding authorities accept."
+      },
+      {
+        "text": "Nation created"
+      },
+      {
+        "role": "heading",
+        "name": "River Nation"
+      },
+      {
+        "text": "Your Nation, its constitution and its founding setup are saved. It stays in Pending Activation until all three founding authorities accept."
+      },
+      {
+        "text": "Pending Activation"
+      },
+      {
+        "text": "Constitution template"
+      },
+      {
+        "text": "Founding progress"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Launch your Nation OS"
+      },
+      {
+        "text": "Six guided steps to a private, community-controlled workspace for your Nation or organization."
+      },
+      {
+        "text": "Signing in with Internet Identity makes this account your Nation's deployer and Founding Authority #1."
+      },
+      {
+        "text": "Name your Nation"
+      },
+      {
+        "text": "Step 1 of 6"
+      },
+      {
+        "text": "Choose governance"
+      },
+      {
+        "text": "Step 2 of 6"
+      },
+      {
+        "text": "Membership & voting"
+      }
+    ],
+    "endWaitMs": 12082,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

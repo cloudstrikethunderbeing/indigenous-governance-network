@@ -1,0 +1,217 @@
+# Project Guidance
+
+## User Preferences
+
+- Minimal UI, maximal UX visual style
+- Mobile-first responsive design
+- Raise shown strictly as a dollar amount ($500,000), never as a percentage
+- The DAO Economy dashboard supersedes the earlier single-scrolling-page, no-login preference: signed-in accounts, roles and multiple pages are now expected for the ledger and governance features
+- Institutional-quality, sophisticated Web3 aesthetic consistent with the existing SOVEREIGN brand
+- Easy to understand without blockchain knowledge; avoid crowded screens and excessive text
+- The DAO and Economy area is a pitch and interactive demo only: use a simulated demo profile and clearly labelled simulated data
+- Everything remains a clearly-labelled demonstration: no fabricated activity, comments or voting results
+- AI is advisory only: voting, treasury execution, membership permissions and governance enforcement stay with the existing DAO contracts
+- Protect Indigenous community knowledge through community-controlled privacy and access permissions
+- Apple/iOS-inspired, intuitive operating-system feel rather than a traditional website
+- Mobile-first responsive design with tap targets of at least 44px and no horizontal scrolling
+- Institutional-quality, sophisticated aesthetic consistent with the existing SOVEREIGN brand
+- Every working feature must be visually obvious; future functionality is labelled Preview
+- No token-sale, fundraising or capital-raise language in the new SOVEREIGN OS surfaces
+- Nations are private by default; collaboration participation is voluntary and administrator-authorized
+- Wallpaper preferences are kept separate from governance and identity settings
+- Everything remains a clearly-labelled demonstration: no fabricated activity or figures
+- The wallpaper preview opens in place beneath the clicked wallpaper tile, never as a fixed full-viewport overlay
+- A wallpaper selected in Appearance settings must appear on the desktop immediately and persist across reloads
+- The mobile apps menu must scroll reliably on a real phone, including landscape and large phones, with the header staying visible
+- LESS IS MORE: a 12-year-old or an 80-year-old can confidently create and manage a DAO without understanding blockchain or governance terminology
+- Keep the existing five-step deployment wizard, but make each step feel like answering a few simple questions
+- Use recommended templates and sensible defaults; hide advanced governance settings unless requested
+- Inside Governance show just four main sections: Our Rules, Decisions, Members and Activity
+- Keep all 24 governance categories, security controls, Participation Census, appeals and execution safeguards working behind the simplified interface
+- Use large buttons, clear explanations, minimal text, visual progress and mobile-friendly layouts
+- Organizations update their rules through their own approved governance process
+- The goal is not to teach people how a DAO works but to let them run their organization effortlessly
+- Do not overwhelm the landing page with governance settings
+- Preserve everything already built
+- Keep the existing deployment wizard, but make each step feel like answering a few simple questions
+- The visual demo is a clearly-labelled demonstration that creates nothing and is never presented as an activated DAO
+- Dark cinematic institutional theme with cyan, violet and gold accents
+- Fraunces for headings and General Sans for body text
+- Governance rules must be enforced by the backend, not only the interface
+- LESS IS MORE: a 12-year-old or an 80-year-old can confidently create and manage a DAO without understanding governance terminology
+- Sensitive governance actions require an explicit confirmation step describing the constitutional authorization needed
+
+## Accepted Requirements
+
+- Preserve the $500,000 fundraising page's purpose and content; fix the hero background for readability
+- Transparent use-of-funds breakdown for the $500,000 raise
+- Proposed SOVEREIGN token design: 21,000,000 max supply, full allocation breakdown summing to 100%/21M, with vesting/lockup/oversight
+- Four-month halving emission schedule that mathematically respects the 21M cap
+- SOVEREIGN Research Credits (SRC) kept separate from the token, earned via verified contributions, spendable on commissioning/prioritizing research
+- Voluntary, non-custodial staking/governance-participation design modeled on NNS/SNS concepts
+- Staged DAO governance: proposals, voting, delegation, transparency, with an explicit Indigenous-sovereignty safeguard
+- Transparent treasury dashboard covering funding, costs, bounties, runway and expenditures
+- A ten-section SOVEREIGN DAO & Economy dashboard area
+- Stage 1 built fully functional; Stage 2 built as functional UI on simulated state; Stage 3 explicitly not built
+- A new Participation Economy demo dashboard area within SOVEREIGN, reachable from the landing page and the DAO & Economy sidebar
+- Attention vs Participation comparison table with the five specified paired rows
+- Participation dashboard with the eight specified participation categories, example activity, SRC rewards and simulated participation history
+- Research Credit economy showing balance, submitted/awaiting/approved counts, credits earned and spent, prioritized assignments and simulated transaction history
+- Governance preview with the seven specified topics, simulated proposals, voting previews, delegation concepts, participation rewards and the Indigenous sovereignty safeguard
+- Four visually distinct sovereignty pillar modules with explanations and illustrative participation activities
+- Seven future economic application areas presented as future opportunities only
+- Interactive seven-step economic flywheel distinguishing simulated credits from actual funding and revenue
+- DAO and tokenomics connection showing the proposed 21M token economy, four-month halving model, community rewards and future DAO governance, with PROPOSED — NOT ISSUED, NOT FOR SALE on every token screen
+- Early access waitlist CTA on the landing page and Participation Economy dashboard with the specified fields, interest categories, consent and confirmation message
+- The $500,000 fundraising call to action kept separate and prominent
+- Restyle the entire existing SOVEREIGN dapp so every page presents the reference DAO dashboard look
+- Left nav rail, top header with search and account, quick-action cards, treasury line chart, latest activity feed, proposals with Yes/No vote bars, workspace tasks, and a right sidebar with new members, applications and online members
+- Fully responsive and mobile-first across both mobile and desktop
+- A once-per-session DAO visitor welcome popup with 'Explore a DAO Challenge' and 'Maybe Later' actions
+- An interactive Community Governance Challenge with the $100,000 scenario, five options, optional reasoning and a Submit Participation button
+- A post-participation public discussion invitation for 'What does digital sovereignty mean to you?' with comment field, optional display name, optional Internet Identity sign-in, submit and moderation/reporting safeguards
+- A rotating, administrator-configurable DAO Challenge of the Week
+- An isolated admin-only DAO Visitor Analytics dashboard with engagement, conversion, answer distributions, recent comments, weekly trends, returning-visitor activity, moderation controls and CSV export
+- Participation data stored in canister-backed storage with anonymous participation allowed and no unnecessary personal data collected
+- The existing application preserved exactly, with the visitor experience added as isolated components
+- Move the complete existing $500,000 fundraising landing page from / to /500k, preserving all content and functionality
+- Make / the new Deploy Your Own DAO product landing page and update internal links to /500k
+- A once-per-session optional visitor popup with 'Explore a DAO Challenge' and 'Maybe Later'
+- An interactive $100,000 Community Governance Challenge with five options, optional explanation, submission and confirmation, clearly labelled a demonstration
+- A 'What does digital sovereignty mean to you?' public discussion with optional display name, comment, optional Internet Identity, moderation and reporting
+- An administrator-configurable DAO Challenge of the Week
+- An upcoming AI DAO Builder introduction (DESCRIBE / DESIGN / DEPLOY) clearly labelled as upcoming
+- Three lead pathways — Free Early Access, Founding Organization, Strategic Funding Partner — each sending a visitor confirmation and a team notification via the existing waitlist email infrastructure
+- One new admin-only page with sections for Visitor Analytics, Early Access Registrations, Founding Organization Leads, Strategic Funding Leads, and Public Participation & Moderation, with lead statuses, private notes and CSV export
+- Preserve all existing fundraising information, DAO functionality, data, authentication, canisters and admin permissions
+- New Nations default to Private and Not Opted In, with 'Private — Not Participating' shown until an authorized administrator enables participation
+- 'Open to Collaboration' shown only after confirmed administrator opt-in, with authentication and authorization required to change the setting
+- Collaboration opt-in state stored persistently per Nation; unknown or missing consent treated as not opted in
+- Private membership, governance, financial and document information never published through the regional network
+- Five-step launcher (name, governance structure, membership/voting permissions, applications and theme, review and launch) reusing the existing DAO deployment backend
+- Launching creates a genuinely persistent, isolated Nation workspace retaining name, governance configuration, membership permissions, voting rules, selected applications and visual theme
+- Unauthenticated visitors can explore a fictional Sample Nation or a clearly labelled temporary sandbox without creating permanent public organizations
+- No simulated successful deployment when nothing has been saved
+- Nation-branded desktop and dashboard with app icons and optional desktop dock
+- Native-feeling mobile home screen with bottom navigation
+- Search, notifications, settings and Help in the workspace
+- Governance, Discussions, Members, Documents, Calendar and Treasury applications
+- Projects and Conservation as clearly labelled previews until operational
+- Contextual AI Copilot where functional and available
+- Persistent Home and Back navigation; Nation switching only for authorized members
+- Settings → Appearance → Wallpapers with seven photographic Canadian regional landscape wallpapers
+- Wallpaper thumbnails, full-screen previews, instant apply and persistent selection
+- Light, Dark and System themes with readable icon labels and overlays
+- Subtle blur or dimming option for desktop wallpapers and a beautiful neutral default wallpaper
+- Administrators may select any wallpaper regardless of region; no sacred imagery, Nation-specific artwork, crests or cultural symbols without authorization
+- Wallpaper preferences kept separate from governance and identity settings
+- Explore Sample Nation with distinct simulated proposals, discussions, members, documents, calendar events and treasury information, all visibly labelled illustrative
+- Interactive demonstration of a governance workflow in the Sample Nation
+- Persistent 'DEPLOY YOUR OWN NATION OS' CTA in the Sample Nation
+- Regional collaboration network demonstrating shared initiatives, regional discussions, conservation and stewardship, resource sharing, and joint proposals and projects
+- Collaboration participation always voluntary and permission-controlled; no Nation accesses another Nation's private information by default
+- First-visit welcome screen with the specified headline, three benefits, 'EXPLORE SAMPLE NATION' primary CTA and 'Skip Introduction' secondary, replayable through Help
+- Preserve all existing DAO, participation, deployment, fundraising and admin functionality, data and migrations
+- Maintain per-Nation data isolation and role-based access
+- Do not claim simulated transactions are real
+- Maintain accessible mobile and desktop layouts
+- Rework the Cost Savings app to present concrete estimated dollar savings from assumption-driven inputs, with per-category and combined annual estimates
+- Fix the wallpaper bug so a selected wallpaper appears on the desktop
+- Fix dark mode so dark text on dark backgrounds is readable
+- Fix the mobile Apps drawer so its app list reliably scrolls on a real phone, including when the phone's CSS viewport is wider than 767px (landscape or a large phone) and when the browser chrome reduces the visible height
+- Creator becomes Founding Authority #1 and appoints Authorities #2 and #3 by secure invitation or principal ID
+- Each founding authority independently accepts with Internet Identity; three distinct principals required
+- DAO remains Pending Activation until all three accept, with no unilateral activation or duplicate identities
+- Invitations are securely bound to the accepting principal
+- Constitutional membership approval thresholds enforced in the backend, default three distinct approvals, configurable percentage rounded up
+- Minimum approvals and eligible voting authorities clearly defined
+- No unilateral changes to constitutional thresholds; amendments require existing governance approval and never apply retroactively to pending decisions
+- Functional join requests and secure invitations with Request → Pending Review → Required Approvals → Role Assignment → Active Membership
+- Each authorized approver counted once; self-approval and duplicate membership prevented
+- Rejection, withdrawal and invitation expiry supported, with applicants notified of status changes
+- Default 8-day waiting period after admission enforced in the backend
+- Constitutional 30-day activity requirement enforced using explicitly defined qualifying activity
+- Eligibility status and reasons for restrictions displayed to members
+- Duplicate voting and unauthorized delegation prevented
+- Eligibility rules applied consistently without penalizing new communities indefinitely
+- Appointments, acceptances, approvals, rejections, votes and amendments recorded in an auditable history
+- Constitutional authorization required for sensitive role changes
+- Every DAO's members, constitution, permissions and governance records isolated
+- Deployment wizard kept ultra-minimal with founding acceptance status 0/3 to 3/3
+- Pending Activation clearly distinguished from Active
+- Secure invitation links generated
+- Automatic activation once all founding requirements are satisfied, with no manual administrator bypass
+- Actual backend enforcement rather than UI-only restrictions
+- Existing DAO instances and data preserved through safe migrations
+- No tokens, treasury payments or AI-controlled governance in this phase
+- A prominent "Launch Your DAO — Visual Demo" button on the public landing page opening /dao-preview
+- /dao-preview is a separate immersive cinematic experience requiring no authentication and creating no DAO deployment or governance records
+- The existing live /dao demo is not modified or replaced
+- /dao-preview shows an animated sovereign governance ecosystem with the seven named modules, each clickable for a concise explanation
+- Implemented capabilities are clearly distinguished from future phases in the preview
+- Smooth lightweight animations with reduced-motion support, mobile-first and ultra-minimal
+- A visual deployment sequence from Your Digital Community through Your Sovereign Digital Ecosystem
+- A full-screen reveal of "YOUR NATION. YOUR RULES. YOUR GOVERNANCE." with Explore Live DAO Demo and Deploy Your Own DAO actions
+- Deploy Your Own DAO connects to the existing functional wizard with all constitutional enforcement preserved
+- The visual demonstration stays entirely separate from the existing live application
+- Existing governance screens are not redesigned
+- All existing Nations, records, permissions, screens, landing-page content, videos and live DAO demos preserved
+- Constitutionally governed authority replacement for death, incapacity, resignation, retirement, elections, lost identity access, removal and restructuring
+- Authority positions separated from the individuals occupying them, with permanent appointment and departure history
+- Independent Internet Identity authentication and explicit acceptance by every successor
+- No automatic authority transfer from inactivity, an email request or an unverified death report
+- A constitutional succession and recovery plan established during initial DAO configuration
+- Designated successors, alternate authorities, elected membership councils, independent recovery trustees and configurable recovery thresholds
+- Identity recovery and principal replacement procedures, including multiple authority vacancy recovery
+- Restricted Governance Mode when normal quorum cannot be reached, with no platform administrator bypass
+- Never silently reduce approval thresholds when an authority leaves
+- Functional constitutional amendment proposals with side-by-side comparison, discussion, voting, ratification, effective date and version history
+- Default 75% amendment threshold subject to defined quorum, approved under the constitution currently in effect
+- No retroactive alteration of pending decisions or completed votes
+- Member departure, retirement, suspension and constitutional removal with immediate permission revocation
+- Personal record export for departing members and notice, review and appeal for involuntary removal
+- Emergency suspension at two of three authorities, temporary, auditable and narrowly scoped, with a restoration process
+- Emergency powers cannot amend the constitution, seize assets, permanently remove authorities or dissolve the DAO
+- Constitutionally governed dissolution at 90% with enhanced quorum, cooling-off, obligations review, data export, final confirmation and archiving
+- No unilateral deletion of an activated DAO; drafts cancellable by their creator
+- Backend-enforced lifecycle states: Draft, Pending Activation, Active, Restricted Governance, Temporarily Suspended, Pending Dissolution, Archived
+- A Governance Control Center covering constitution, amendments, authorities, succession plan, appointments and departures, membership, history, emergency procedures and lifecycle
+- Fix the existing founding authority registration error and recover partially created Nations without duplication
+- One-click creation with a cinematic reveal and a founding council dashboard
+- Secure invitations and independent authority acceptance, with constitutional ratification before activation
+- Preserve existing Nations, records, permissions, onboarding, landing page, videos, demos and the live DAO demo through safe migrations
+- No tokens, financial transactions or AI-controlled governance
+
+## Verified Commands
+
+- **typecheck**: `pnpm typecheck`
+- **fix**: `pnpm fix`
+- **build**: `pnpm build`
+
+## Learnings
+
+- The PocketIC lane test/pocketic/constitution.test.ts covers the Constitution Builder read/validate API; the frontend suite is fully mocked and cannot prove canister-backed persistence.
+- Recorded pre-existing baseline failures that are not regressions: 22 tests in src/frontend/src/__tests__/DeployLandingAndEngagement.test.tsx and src/frontend/src/__tests__/Home.test.tsx.
+- The guided constitution walkthrough at /os/constitution and the launch-nation wizard at /os/launcher keep their step rails contained with .gov-step-rail (overflow-x:auto) plus min-w-0 on the grid/flex tracks, and the OS window body uses .os-window-body (overflow-x:clip) so a full-bleed rail cannot shift the page.
+- The launcher's launch sequence in src/frontend/src/pages/os/LaunchNationPage.tsx must create the Nation, call beginFoundingSetup, appoint and accept the creator as founding authority, then saveConstitution, then activateFounding; saveConstitution only succeeds while a Nation is in Founding Setup.
+- The Deploy landing page at /deploy is a top-level route not wrapped in OsShell, so it renders its own footer and does not inherit the shell's caffeine.ai attribution.
+- The landing page safety section lives at src/frontend/src/components/visitor/SafetySecuritySection.tsx (data-ocid deploy.safety_section) and is placed immediately after the hero in src/frontend/src/pages/DeployLandingPage.tsx.
+- A missing src/backend/dist/backend.wasm is a stale build artifact, not a source defect; mops check --fix then mops build regenerates it and the local deploy prerequisite passes.
+- The launcher wizard at /os/launcher requires Internet Identity sign-in before the six-step wizard renders; a signed-out visit shows only a 'Sign in to launch your Nation OS' prompt.
+- The launcher wizard steps are: 1 Name your Nation or organization, 2 Choose governance, 3 Membership & voting, 4 Apps & theme, 5 Your rules, 6 review/launch; the launch button reads 'Launch your Nation OS' and stays disabled until the rules step is saved.
+- The public landing page is /deploy; its visual demo entry link reads 'Launch Your DAO — Visual Demo' and opens /dao-preview.
+- /dao-preview module tiles are buttons labelled '<Module> — implemented today' or '<Module> — future phase'; the guided sequence advances with a 'Next' button and ends with 'Reveal Your Nation' at Step 06 / 06.
+- FoundingAppointmentStatus, FoundingSetupStatus and JoinRequestStatus are generated value enums; switch on their members rather than string literals.
+- Biome rejects role="status" and role="dialog" on div elements; use semantic elements or aria-live attributes instead.
+- Import Principal from the SDK principal module, not from @/backend, in frontend code.
+- The launcher's launch sequence in src/frontend/src/pages/os/LaunchNationPage.tsx must create the Nation, call beginFoundingSetup, appoint and accept the creator as founding authority, then saveConstitution; activateFounding needs three accepted authorities so calling it at 1/3 always returns a false failure.
+- The Governance area's four top-level sections come from src/frontend/src/components/os/governance/governanceSections.ts; the governance views are nested inside them, never top-level.
+- NationLifecycleState, AmendmentProposalStatus, DepartureKind, DepartureStatus, DissolutionStatus and VoteChoice are generated value enums; compare with members such as NationLifecycleState.pendingActivation, never string literals.
+- A pending migration's OldActor must match the deployed .most baseline, not the new actor body; use a separate Old type when a record gained a field.
+- The Governance Control Center reuses MembersSection, DeparturePanel, RemovalReviewPanel and GovernanceHistoryPanel so its content set matches the Governance area.
+- getActivationRequirements returns outstanding[], constitutionRatifiedByAll, hasConfirmedConstitution and planRatified for plain-language activation status.
+- createNationFromLauncher records the creator's pending Founding Authority #1 appointment; the launcher confirms it in place via confirmFoundingSeat and never appoints the creator twice.
+- getLaunchStatus derives callerSeats and awaitingOtherSeats from foundingAppointments; the founding council marks heldByCaller seats as You and the rest as awaiting other people.
+- resumeLaunch belongs only in constitution-api.mo; a duplicate stub in sovereign-api.mo caused an M0051 duplicate definition.
+- The Governance Control Center is reached from Governance by selecting the Control Center section and then pressing Open the Control Center, which opens /os/governance/control-center.
+- The founding council and Governance founding panel show already-seated principals with plain wording instead of offering an appointment that the backend would refuse.

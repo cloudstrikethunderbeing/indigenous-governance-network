@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:45:33.174Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Deploy a Nation\"",
+        "target": {
+          "role": "link",
+          "name": "Deploy a Nation"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Close Deploy a Nation\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "link",
+          "name": "Close Deploy a Nation",
+          "within": "Deploy a Nation"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Deploy a Nation — Working. Launch a new…\" in \"Apps — solid dot working, dashed ring p…\"",
+        "target": {
+          "role": "link",
+          "name": "Deploy a Nation — Working. Launch a new Nation in five guided steps.",
+          "within": "Apps — solid dot working, dashed ring preview"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-founding-progress.e2e.ts::launch-nation-founding-progress",
+      "targetId": "web",
+      "instructionDigest": "8197c2c9a8260072d2c3578ef6f04674f501145db1fd492cd587bcb5619cfad1",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Opened the Deploy a Nation page at /os/launcher (dismissed the welcome intro, then clicked Deploy a Nation). The page shows the \"Deploy a Nation\" window with \"Launch your Nation OS\" and a \"Sign in to launch your Nation OS\" prompt with a Sign in with Internet Identity button. Did not press Continue.",
+    "startPath": "/os/launcher",
+    "endPath": "/os/launcher",
+    "goneAnchors": [
+      {
+        "role": "button",
+        "name": "Skip the introduction"
+      },
+      {
+        "role": "heading",
+        "name": "Welcome to Your Nation's Digital Future"
+      },
+      {
+        "text": "Govern Independently"
+      },
+      {
+        "text": "Make and record your community's own decisions, on your own terms."
+      },
+      {
+        "text": "Connect with Other Nations"
+      },
+      {
+        "text": "Choose to collaborate with other Nations — always voluntarily."
+      },
+      {
+        "text": "Build Your Community's Future"
+      },
+      {
+        "text": "Keep governance, documents and knowledge in one private home."
+      }
+    ],
+    "endWaitMs": 11581,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -1,0 +1,547 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T04:02:16.549Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap node \"Cedar River Nation\"",
+        "target": {
+          "text": "Cedar River Nation"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 33) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.9521,
+          "fy": 0.4131
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1250, 33) on banner (1 of 1)",
+        "point": {
+          "x": 1250,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "banner",
+            "position": {
+              "index": 0,
+              "of": 1
+            }
+          },
+          "fx": 0.9851,
+          "fy": 0.4728
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Nation Settings\"",
+        "target": {
+          "role": "link",
+          "name": "Nation Settings"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Nation settings\"",
+        "target": {
+          "role": "button",
+          "name": "Nation settings"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 33) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.416,
+          "fy": 0.4131
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Home\"",
+        "target": {
+          "role": "link",
+          "name": "Home"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 33) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.9521,
+          "fy": 0.4131
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1250, 33) on banner (1 of 1)",
+        "point": {
+          "x": 1250,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "banner",
+            "position": {
+              "index": 0,
+              "of": 1
+            }
+          },
+          "fx": 0.9851,
+          "fy": 0.4728
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Help — replay the introduction\"",
+        "target": {
+          "role": "button",
+          "name": "Help — replay the introduction"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1217, 33) on button \"Help — replay the introduction\"",
+        "point": {
+          "x": 1217,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "button",
+            "name": "Help — replay the introduction"
+          },
+          "fx": 0.4545,
+          "fy": 0.4684
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 33) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.9521,
+          "fy": 0.4131
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1217, 33) on button \"Help — replay the introduction\"",
+        "point": {
+          "x": 1217,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "button",
+            "name": "Help — replay the introduction"
+          },
+          "fx": 0.4545,
+          "fy": 0.4684
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1217, 33) on button \"Help — replay the introduction\"",
+        "point": {
+          "x": 1217,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "button",
+            "name": "Help — replay the introduction"
+          },
+          "fx": 0.4545,
+          "fy": 0.4684
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1217, 33) on button \"Help — replay the introduction\"",
+        "point": {
+          "x": 1217,
+          "y": 33
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "button",
+            "name": "Help — replay the introduction"
+          },
+          "fx": 0.4545,
+          "fy": 0.4684
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap node \"Cedar River Nation\"",
+        "target": {
+          "text": "Cedar River Nation"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 32) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 32
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.9521,
+          "fy": 0.3506
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Nation Settings\"",
+        "target": {
+          "role": "link",
+          "name": "Nation Settings"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Nation settings\"",
+        "target": {
+          "role": "button",
+          "name": "Nation settings"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 32) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 32
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.416,
+          "fy": 0.3506
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Home\"",
+        "target": {
+          "role": "link",
+          "name": "Home"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 32) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 32
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.9521,
+          "fy": 0.3506
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1250, 32) on banner (1 of 1)",
+        "point": {
+          "x": 1250,
+          "y": 32
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "banner",
+            "position": {
+              "index": 0,
+              "of": 1
+            }
+          },
+          "fx": 0.9851,
+          "fy": 0.4585
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Help — replay the introduction\"",
+        "target": {
+          "role": "button",
+          "name": "Help — replay the introduction"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Skip Introduction\" in \"SOVEREIGN OS\"",
+        "target": {
+          "role": "button",
+          "name": "Skip Introduction",
+          "within": "SOVEREIGN OS"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1167, 32) on node \"Cedar River Nation\"",
+        "point": {
+          "x": 1167,
+          "y": 32
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "text": "Cedar River Nation"
+          },
+          "fx": 0.9521,
+          "fy": 0.3506
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (1250, 32) on banner (1 of 1)",
+        "point": {
+          "x": 1250,
+          "y": 32
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "banner",
+            "position": {
+              "index": 0,
+              "of": 1
+            }
+          },
+          "fx": 0.9851,
+          "fy": 0.4585
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap link \"Nation Settings\"",
+        "target": {
+          "role": "link",
+          "name": "Nation Settings"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "founding-seat-visible.e2e.ts::founding-seat-visible",
+      "targetId": "web",
+      "instructionDigest": "03419e97137c42826b868628f9c3cccb179fda9b86154b2bd977952f141560b4",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "The app is signed in: the header shows the signed-in user \"Cedar River Nation\" with the Nation Settings window open (Governance, roles and privacy). No sign-in control was needed; the session is active.",
+    "startPath": "/",
+    "endPath": "/os/settings",
+    "endAnchors": [
+      {
+        "text": "Nation workspace"
+      },
+      {
+        "role": "heading",
+        "name": "Nation Settings"
+      },
+      {
+        "role": "button",
+        "name": "Search apps and documents"
+      },
+      {
+        "role": "button",
+        "name": "Notifications"
+      },
+      {
+        "role": "button",
+        "name": "Help"
+      },
+      {
+        "role": "button",
+        "name": "Nation settings"
+      },
+      {
+        "text": "Governance model, roles and privacy."
+      },
+      {
+        "text": "Working"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Desktop"
+      },
+      {
+        "role": "button",
+        "name": "Help — replay the introduction"
+      },
+      {
+        "role": "heading",
+        "name": "Open the Cedar River Nation workspace"
+      },
+      {
+        "text": "A Nation workspace is a private, community-controlled home for a Nation's governance, discussions, documents, calendar and treasury. Each Nation decides what stays private and what it shares."
+      },
+      {
+        "role": "link",
+        "name": "Open workspace"
+      },
+      {
+        "text": "Apps — solid dot working, dashed ring preview"
+      },
+      {
+        "role": "button",
+        "name": "Skip the introduction"
+      },
+      {
+        "role": "heading",
+        "name": "Welcome to Your Nation's Digital Future"
+      }
+    ],
+    "endWaitMs": 11653,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

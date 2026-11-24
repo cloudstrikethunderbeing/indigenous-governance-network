@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "founding-seat-visible",
+    "kind": "interactive",
+    "goal": "The Governance founding panel shows the founding authorities and how many seats are accepted",
+    "requirementIndexes": [
+      10,
+      11,
+      12
+    ],
+    "acceptanceCriteriaIndexes": [
+      6
+    ],
+    "steps": [
+      "Sign in",
+      "Open Governance and choose the Control Center section",
+      "Press Open the Control Center"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Governance"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Control Center"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Governance Control Center"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Authorities"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "1/3"
+      }
+    ]
+  }
+}

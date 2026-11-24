@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "launch-nation-os",
+    "kind": "interactive",
+    "goal": "Sign in, complete the launcher and land on the founding council with the creator's seat held and the Nation Pending Activation",
+    "requirementIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "acceptanceCriteriaIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "steps": [
+      "Sign in",
+      "Name the Nation River Nation and press Continue",
+      "Choose the recommended governance option and press Continue",
+      "Keep the recommended membership and voting settings and press Continue",
+      "Keep the recommended apps and theme and press Continue",
+      "Save the rules step and press Continue",
+      "Press Launch your Nation OS"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Name your Nation"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "River Nation"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Governance"
+      },
+      {
+        "afterStep": 3,
+        "expectText": "Membership"
+      },
+      {
+        "afterStep": 4,
+        "expectText": "Apps"
+      },
+      {
+        "afterStep": 5,
+        "expectText": "Rules"
+      },
+      {
+        "afterStep": 6,
+        "expectText": "Founding"
+      },
+      {
+        "afterStep": 6,
+        "expectText": "1/3"
+      },
+      {
+        "afterStep": 6,
+        "expectText": "Pending Activation"
+      },
+      {
+        "afterStep": 6,
+        "expectNoText": "founding authority could not be appointed"
+      }
+    ]
+  }
+}

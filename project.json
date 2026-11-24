@@ -1,0 +1,20 @@
+{
+  "overview": "A sovereign Nation OS platform where communities launch their own constitutionally governed digital nation with a three-authority founding council.",
+  "features": [
+    "Launch a Nation OS through a guided six-step wizard",
+    "Sign in with Internet Identity to become Founding Authority #1",
+    "Resume a partially completed launch without creating a duplicate Nation",
+    "See which founding seat your signed-in account holds",
+    "Invite and confirm two further founding authorities before activation",
+    "Governance, discussions, members, documents, calendar and treasury apps inside each Nation"
+  ],
+  "category": "governance-platform",
+  "tags": [
+    "governance",
+    "dao",
+    "indigenous-sovereignty",
+    "nation-os",
+    "web3"
+  ],
+  "last_updated": "2026-11-24T03:40:39.434Z"
+}

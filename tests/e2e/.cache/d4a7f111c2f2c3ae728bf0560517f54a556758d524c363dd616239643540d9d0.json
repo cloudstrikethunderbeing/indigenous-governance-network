@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:47:46.240Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Close\" in \"Three Founding Authorities\"",
+        "target": {
+          "role": "button",
+          "name": "Close",
+          "within": "Three Founding Authorities"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Membership — implemented today\" in \"The sovereign governance ecosystem\"",
+        "target": {
+          "role": "button",
+          "name": "Membership — implemented today",
+          "within": "The sovereign governance ecosystem"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-modules.e2e.ts::dao-preview-modules",
+      "targetId": "web",
+      "instructionDigest": "72690c69879bc82922f94accc9ce11f4ae2a96d0f6431e0160e2ed5c57b1b3e7",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Closed the Three Founding Authorities dialog and pressed \"Membership — implemented today\" on /dao-preview. A Membership dialog opened showing \"Implemented today\" and its description (\"Join requests, approvals and roles, on the record.\").",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Membership"
+      },
+      {
+        "text": "Join requests, approvals and roles, on the record."
+      },
+      {
+        "text": "Applicants move from request to review to approval to an assigned role. Every approval is counted once, and each step is written to an auditable history."
+      },
+      {
+        "text": "Step 06 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Sovereign Digital Ecosystem"
+      },
+      {
+        "text": "Constitution, authorities, members, treasury and collaboration, connected around one sovereign core you control."
+      },
+      {
+        "role": "button",
+        "name": "Reveal Your Nation"
+      },
+      {
+        "role": "dialog",
+        "name": "Membership"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Three Founding Authorities"
+      },
+      {
+        "text": "Three distinct people must accept before activation."
+      },
+      {
+        "text": "The creator becomes Founding Authority #1 and appoints two more by secure invitation. Each accepts independently with Internet Identity, so no single person can activate a Nation alone."
+      },
+      {
+        "text": "Step 05 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Governance"
+      },
+      {
+        "text": "Proposals, debate and voting with a clear tally — enforced by the constitution, not by whoever holds the keys."
+      },
+      {
+        "role": "button",
+        "name": "Next"
+      },
+      {
+        "role": "dialog",
+        "name": "Three Founding Authorities"
+      }
+    ],
+    "endWaitMs": 10761,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

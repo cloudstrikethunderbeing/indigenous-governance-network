@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T02:52:16.815Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Next\" in \"Step 05 / 06\"",
+        "target": {
+          "role": "button",
+          "name": "Next",
+          "within": "Step 05 / 06"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "dao-preview-final-reveal.e2e.ts::dao-preview-final-reveal",
+      "targetId": "web",
+      "instructionDigest": "784d453a869f1bb55903ad8094e246cd864af8e7f0c918da35157662687bd19e",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Pressed Next on the /dao-preview step sequence; it advanced from \"Step 05 / 06\" (Your Governance) to \"Step 06 / 06\" (Your Sovereign Digital Ecosystem), and the Next button now reads \"Reveal Your Nation\".",
+    "startPath": "/dao-preview",
+    "endPath": "/dao-preview",
+    "endAnchors": [
+      {
+        "text": "Step 06 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Sovereign Digital Ecosystem"
+      },
+      {
+        "text": "Constitution, authorities, members, treasury and collaboration, connected around one sovereign core you control."
+      },
+      {
+        "role": "button",
+        "name": "Reveal Your Nation"
+      },
+      {
+        "role": "region",
+        "name": "Your Sovereign Digital Ecosystem"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "Step 05 / 06"
+      },
+      {
+        "role": "heading",
+        "name": "Your Governance"
+      },
+      {
+        "text": "Proposals, debate and voting with a clear tally — enforced by the constitution, not by whoever holds the keys."
+      },
+      {
+        "role": "button",
+        "name": "Next"
+      },
+      {
+        "role": "region",
+        "name": "Your Governance"
+      }
+    ],
+    "endWaitMs": 10742,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

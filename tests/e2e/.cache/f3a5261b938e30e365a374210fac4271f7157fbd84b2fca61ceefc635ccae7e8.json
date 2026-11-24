@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T04:06:54.292Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap link \"Open the Control Center\" in \"Governance\"",
+        "target": {
+          "role": "link",
+          "name": "Open the Control Center",
+          "within": "Governance"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "founding-seat-visible.e2e.ts::founding-seat-visible",
+      "targetId": "web",
+      "instructionDigest": "158fb783e09523c1bc466f733a183d1c882064844fb3a4598c1a9f6757160562",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Pressed \"Open the Control Center\"; the Governance Control Center window opened at /os/governance/control-center, showing \"Control Center — The Nation's state, its constitution and authorities, its succession plan, and the emergency procedures that keep it safe.\" with sections for Current state, Con…",
+    "startPath": "/os/governance",
+    "endPath": "/os/governance/control-center",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Governance Control Center"
+      },
+      {
+        "role": "link",
+        "name": "Close Governance Control Center"
+      },
+      {
+        "role": "heading",
+        "name": "Control Center"
+      },
+      {
+        "text": "The Nation's state, its constitution and authorities, its succession plan, and the emergency procedures that keep it safe."
+      },
+      {
+        "text": "Current state"
+      },
+      {
+        "text": "The Nation's state could not be read right now."
+      },
+      {
+        "role": "heading",
+        "name": "Constitution in force"
+      },
+      {
+        "text": "No constitution has been confirmed for this Nation yet."
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "Proposals, votes and decisions."
+      },
+      {
+        "role": "link",
+        "name": "Close Governance"
+      },
+      {
+        "role": "heading",
+        "name": "Our Rules"
+      },
+      {
+        "text": "The rules your organization agrees to follow."
+      },
+      {
+        "text": "Setup progress"
+      },
+      {
+        "text": "15% complete"
+      },
+      {
+        "role": "progressbar",
+        "name": "2 of 13 governance areas set up"
+      },
+      {
+        "text": "2 of 13 areas are set up. Finish the rest whenever you are ready."
+      }
+    ],
+    "endWaitMs": 11211,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

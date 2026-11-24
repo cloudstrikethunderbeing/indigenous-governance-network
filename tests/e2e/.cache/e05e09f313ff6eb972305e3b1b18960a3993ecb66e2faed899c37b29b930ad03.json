@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T03:51:13.284Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Save my rules\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "button",
+          "name": "Save my rules",
+          "within": "Deploy a Nation"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Continue\" in \"Deploy a Nation\"",
+        "target": {
+          "role": "button",
+          "name": "Continue",
+          "within": "Deploy a Nation"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "launch-nation-os.e2e.ts::launch-nation-os",
+      "targetId": "web",
+      "instructionDigest": "3a862075296042eef17c7af1fbfe6bc1db957de83f92f7e6bfb17e37cd008b96",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Pressed \"Save my rules\" (status: \"Your rules are ready…\"), which enabled Continue, then pressed Continue. The launcher advanced to step 6 \"Review and launch your Nation OS\" showing River Nation, Community template, Consensus council, Invitation only, Simple majority (quorum 50%, approval 60%), apps…",
+    "startPath": "/os/launcher",
+    "endPath": "/os/launcher",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Review and launch your Nation OS"
+      },
+      {
+        "text": "Check every choice below. Launching creates a private Nation workspace that only you and the members you invite can see."
+      },
+      {
+        "text": "Name"
+      },
+      {
+        "text": "River Nation"
+      },
+      {
+        "text": "Description"
+      },
+      {
+        "text": "Not set"
+      },
+      {
+        "text": "Region"
+      },
+      {
+        "text": "Template"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Set your organization’s rules"
+      },
+      {
+        "text": "Answer a few simple questions. We start you from a recommended template with sensible answers already chosen, so you can continue without changing anything."
+      },
+      {
+        "text": "Start from an example"
+      },
+      {
+        "text": "Every template is an example — none of them assumes your organization’s legal or traditional governance authority."
+      },
+      {
+        "text": "Recommended"
+      },
+      {
+        "text": "Example"
+      },
+      {
+        "text": "For a neighbourhood or interest group making shared choices together."
+      },
+      {
+        "text": "Indigenous Nation"
+      }
+    ],
+    "endWaitMs": 11019,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
